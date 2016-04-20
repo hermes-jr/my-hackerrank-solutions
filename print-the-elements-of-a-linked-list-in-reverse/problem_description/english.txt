@@ -1,0 +1,32 @@
+<sub>This challenge is part of a tutorial track by [MyCodeSchool](http://www.youtube.com/mycodeschool) and is accompanied by a video lesson.</sub>
+
+
+You’re given the pointer to the head node of a linked list and you need to print all its elements in reverse order from tail to head, one element per line. The head pointer may be null meaning that the list is empty - in that case, don’t print anything!
+
+**Input Format**  
+You have to complete the <code>void ReversePrint(Node* head)</code> method which takes one argument - the head of the linked list. You should NOT read any input from stdin/console.
+
+**Output Format**  
+Print the elements of the linked list in reverse order to stdout/console (using <code>printf</code> or <code>cout</code>) , one per line.
+
+**Sample Input**
+
+1 --> 2 --> NULL   
+2 --> 1 --> 4 -->  5 --> NULL   
+   
+**Sample Output**
+
+    2
+    1
+    5
+    4
+    1
+    2
+    
+**Explanation**  
+1. First list is printed from tail to head hence 2,1  
+2. Similarly second list is also printed from tail to head. 
+
+**Video lesson**  
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/K7J3nCeRC80?theme=light" frameborder="0" allowfullscreen></iframe>

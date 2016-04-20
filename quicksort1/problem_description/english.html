@@ -1,0 +1,43 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>The previous challenges covered <a href="https://en.wikipedia.org/wiki/Insertion_sort">Insertion Sort</a>, which is a simple and intuitive sorting algorithm with an average case performance of $O(n^2)$. In these next few challenges, we're covering a <em>divide-and-conquer</em> algorithm called <a href="https://en.wikipedia.org/wiki/Quicksort">Quicksort</a> (also known as <em>Partition Sort</em>). </p>
+
+<p><strong>Step 1: Divide</strong> <br>
+Choose some pivot element, $p$, and partition your unsorted array, $ar$, into three smaller arrays: $left$, $right$, and $equal$, where each element in $left \lt p$, each element in $right \gt p$, and each element in $equal = p$. </p>
+
+<p><strong>Challenge</strong> <br>
+Given $ar$ and $p=ar[0]$, partition $ar$ into $left$, $right$, and $equal$ using the <em>Divide</em> instructions above. Then print each element in $left$ followed by each element in $equal$, followed by each element in $right$ on a single line. Your output should be space-separated.</p>
+
+<p><strong>Note:</strong> There is no need to sort the elements <a href="https://en.wikipedia.org/wiki/In-place_algorithm">in-place</a>; you can create two lists and stitch them together at the end. </p></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>The first line contains $n$ (the size of $ar$). <br>
+The second line contains $n$ space-separated integers describing $ar$ (the unsorted array). The first integer (corresponding to $ar[0]$) is your pivot element, $p$.</p>
+
+<p><strong>Constraints</strong>  </p>
+
+<ul>
+<li>$1 \le n \le 1000$   </li>
+<li>$-1000 \le x \le 1000, x ∈ ar$   </li>
+<li>All elements will be unique.</li>
+<li>Multiple answer can exists for the given test case. Print any one of them.</li>
+</ul></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>On a single line, print the partitioned numbers (i.e.: the elements in $left$, then the elements in $equal$, and then the elements in $right$). Each integer should be separated by a single space.</p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code>5
+4 5 3 7 2
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>3 2 4 5 7
+</code></pre></div><div class='msB'><p><strong>Explanation</strong></p></div><div class='msB'><p>$ar = [4, 5, 3, 7, 2]$ <br>
+<em>Pivot</em>: $p = ar[0] = 4$. <br>
+$left = \{\}$; $equal = \{4\}$; $right = \{\}$</p>
+
+<p>$ar[0] = 4 \geq p$, so it's added to $right$. <br>
+$left = \{\}$; $equal = \{4\}$; $right = \{4\}$</p>
+
+<p>$ar[1] = 5 \geq p$, so it's added to $right$. <br>
+$left = \{\}$; $equal = \{4\}$; $right = \{4, 5\}$</p>
+
+<p>$ar[2] = 3 \lt p$, so it's added to $left$. <br>
+$left = \{3\}$; $equal = \{4\}$; $right = \{4, 5\}$</p>
+
+<p>$ar[2] = 7 \geq p$, so it's added to $right$. <br>
+$left = \{3\}$; $equal = \{4\}$; $right = \{4, 5, 7\}$</p>
+
+<p>$ar[2] = 2 \lt p$, so it's added to $left$. <br>
+$left = \{3,2\}$; $equal = \{4\}$; $right = \{4, 5, 7\}$</p>
+
+<p>We then print the elements of $left$, followed by $equal$, followed by $right$, we get: <code>3 2 4 5 7</code>.</p>
+
+<p>This example is only one correct answer based on the implementation shown, but it is not the only correct answer (e.g.: another valid solution would be <code>2 3 4 5 7</code>).</p></div></body></html>

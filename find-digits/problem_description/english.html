@@ -1,0 +1,15 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>Given an integer, $N$, traverse its digits ($d$<em><sub>1</sub></em>,$d$<em><sub>2</sub></em>,...,$d$<em><sub>n</sub></em>) and determine how many digits evenly divide $N$ (i.e.: count the number of times $N$ divided by each digit $d$<em><sub>i</sub></em> has a remainder of $0$). Print the number of evenly divisible digits. </p>
+
+<p><strong>Note:</strong> Each digit is considered to be unique, so each occurrence of the same evenly divisible digit should be counted (i.e.: for $N=111$, the answer is $3$).</p></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>The first line is an integer, $T$, indicating the number of test cases. <br>
+The $T$ subsequent lines each contain an integer, $N$.  </p>
+
+<p><strong>Constraints</strong> <br>
+$1 \le T \le 15$ <br>
+$0 &lt; N &lt; 10^{9}$</p></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>For every test case, count and print (on a new line) the number of digits in $N$ that are able to evenly divide $N$.</p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code>2
+12
+1012
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>2
+3
+</code></pre></div><div class='msB'><p><strong>Explanation</strong></p></div><div class='msB'><p>The number $12$ is broken into two digits, $1$ and $2$. When $12$ is divided by either of those digits, the calculation's remainder is $0$; thus, the number of evenly-divisible digits in $12$ is $2$.</p>
+
+<p>The number $1012$ is broken into four digits, $1$, $0$, $1$, and $2$. $1012$ is evenly divisible by its digits $1$, $1$, and $2$, but it is <em>not</em> divisible by $0$ as <strong>division by zero is undefined</strong>; thus, our count of evenly divisible digits is $3$.</p></div></body></html>

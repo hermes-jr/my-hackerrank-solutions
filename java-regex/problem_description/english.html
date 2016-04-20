@@ -1,0 +1,57 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>Write a class called <em>myRegex</em> which will contain a string pattern. You need to write a regular expression and assign it to the pattern such that it can be used to validate an IP address. Use the following definition of an IP address:<br></p>
+
+<pre><code>IP address is a string in the form "A.B.C.D", where the value of A, B, C, and D may range from 0 to 255. Leading zeros are allowed. The length of A, B, C, or D can't be greater than 3.
+</code></pre>
+
+<p>Some valid IP address:</p>
+
+<pre><code>000.12.12.034
+121.234.12.12
+23.45.12.56
+</code></pre>
+
+<p>Some invalid IP address:</p>
+
+<pre><code>000.12.234.23.23
+666.666.23.23
+.213.123.23.32
+23.45.22.32.
+I.Am.not.an.ip
+</code></pre>
+
+<p>In this problem you will be provided strings containing any combination of ASCII characters. You have to write a regular expression to find the valid IPs.</p>
+
+<p>Just write the myRegex class, and we will append your code after the following piece of code automatically before running it:</p>
+
+<pre><code>import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.Scanner;
+
+class Solution{
+
+    public static void main(String []args)
+    {
+        Scanner in = new Scanner(System.in);
+        while(in.hasNext())
+        {
+            String IP = in.next();
+            System.out.println(IP.matches(new myRegex().pattern));
+        }
+
+    }
+}
+</code></pre>
+
+<p>(The class written by you <em>MUST NOT</em> be public)</p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code>000.12.12.034
+121.234.12.12
+23.45.12.56
+00.12.123.123123.123
+122.23
+Hello.IP
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>true
+true
+true
+false
+false
+false
+</code></pre></div></body></html>

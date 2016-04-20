@@ -1,0 +1,53 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>Sid is obsessed with reading short stories. Being a CS student, he is doing some interesting frequency analysis with the books. He chooses strings $S1$ and $S2$ in such a way that $|len(S1) -len(S2)| \le 1$.  </p>
+
+<p>Your task is to help him find the minimum number of characters of the first string he needs to change to enable him to make it an <a href="https://en.wikipedia.org/wiki/Anagram">anagram</a> of the second string.  </p>
+
+<p><em>Note:</em> A word <em>x</em> is an anagram of another word <em>y</em> if we can produce <em>y</em> by rearranging the letters of <em>x</em>.</p>
+
+<p><strong>Input Format</strong> <br>
+The first line will contain an integer, $T$, representing the number of test cases. 
+Each test case will contain a string having length $len(S1)+len(S2)$, which will be concatenation of both the strings described above in the problem.The given string will contain only characters from $a$ to $z$.</p>
+
+<p><strong>Output Format</strong> <br>
+An integer corresponding to each test case is printed in a different line, i.e. the number of changes required for each test case. Print $-1$ if it is not possible.</p>
+
+<p><strong>Constraints</strong>  </p>
+
+<ul>
+<li>$1 \le T \le 100$ <br></li>
+<li>$1 \le len(S1) + len(S2) \le 10^4$  </li>
+</ul>
+
+<p><strong>Sample Input</strong></p>
+
+<pre><code>6
+aaabbb
+ab
+abc
+mnop
+xyyx
+xaxbbbxx
+</code></pre>
+
+<p><strong>Sample Output</strong></p>
+
+<pre><code>3
+1
+-1
+2
+0
+1
+</code></pre>
+
+<p><strong>Explanation</strong> <br>
+<em>Test Case #01:</em> We have to replace all three characters from the first string to make both of strings anagram. Here, $S1$ = "aaa" and $S2$ = "bbb". So the solution is to replace all character 'a' in string <em>a</em> with character 'b'. <br>
+<br>
+<em>Test Case #02:</em> You have to replace 'a' with 'b', which will  generate "bb". <br>
+<br>
+<em>Test Case #03:</em> It is not possible for two strings of unequal length to be anagram for each other. <br>
+<br>
+<em>Test Case #04:</em> We have to replace both the characters of first string ("mn") to make it anagram of other one. <br>
+<br>
+<em>Test Case #05:</em> $S1$ and $S2$ are already anagram to each other. <br>
+<br>
+<em>Test Case #06:</em> Here <em>S1 = "xaxb"</em> and <em>S2 = "bbxx"</em>. He had to replace 'a' from <em>S1</em> with 'b' so that <em>S1 = "xbxb"</em> and we can rearrange its letter to "bbxx" in order to get <em>S2</em>.</p></div></body></html>

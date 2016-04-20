@@ -1,0 +1,29 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>A Discrete Mathematics professor has a class of $N$ students. Frustrated with their lack of discipline, he decides to cancel class if fewer than $K$ students are present when class starts.</p>
+
+<p>Given the arrival time of each student, determine if the class is canceled.</p></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>The first line of input contains $T$, the number of test cases. </p>
+
+<p>Each test case consists of two lines. The first line has two space-separated integers, $N$ (students in the class) and $K$ (the cancelation threshold). <br>
+The second line contains $N$ space-separated integers ($a_1, a_2, \ldots, a_N$) describing the arrival times for each student.</p>
+
+<p><strong>Note:</strong> Non-positive arrival times ($a_i \le 0$) indicate the student arrived early or on time; positive arrival times ($a_i \gt 0$) indicate the student arrived $a_i$ minutes late.</p></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>For each test case, print the word <strong>YES</strong> if the class is canceled or <strong>NO</strong> if it is not. </p>
+
+<p><strong>Constraints</strong>  </p>
+
+<ul>
+<li>$1 \le T \le 10$  </li>
+<li>$1 \le N \le 1000$  </li>
+<li>$1 \le K \le N$  </li>
+<li>$-100 \le a_i \le 100, where\ i \in [1, N]$  </li>
+</ul>
+
+<p><strong>Note</strong> <br>
+If a student arrives exactly on time $(a_i = 0)$, the student is considered to have entered before the class started.</p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code>2
+4 3
+-1 -3 4 2
+4 2
+0 -1 2 1
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>YES
+NO
+</code></pre></div><div class='msB'><p><strong>Explanation</strong></p></div><div class='msB'><p>For the first test case, $K = 3$. The professor wants at least $3$ students in attendance, but only $2$ have arrived on time ($-3$ and $-1$). Thus, the class is canceled.</p>
+
+<p>For the second test case, $K = 2$. The professor wants at least $2$ students in attendance, and there are $2$ who have arrived on time ($0$ and $-1$). Thus, the class is <em>not</em> canceled.</p></div></body></html>

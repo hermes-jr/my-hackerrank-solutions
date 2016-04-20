@@ -1,0 +1,28 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>Lisa just got a new math workbook.
+A workbook contains exercise problems, grouped into chapters.</p>
+
+<ul>
+<li>There are $n$ chapters in Lisa's workbook, numbered from $1$ to $n$.</li>
+<li>The $i$-th chapter has $t_{i}$ problems, numbered from $1$ to $t_{i}$.</li>
+<li>Each page can hold <em>up to</em> $k$ problems. There are no empty pages or unnecessary spaces, so only the last page of a chapter may contain fewer than $k$ problems.</li>
+<li>Each new chapter starts on a new page, so a page <em>will never</em> contain problems from more than one chapter.</li>
+<li>The page number indexing starts at $1$.</li>
+</ul>
+
+<p>Lisa believes a problem to be <em>special</em> if its index (within a chapter) is the same as the page number where it's located. Given the details for Lisa's workbook, can you count its number of <em>special</em> problems?</p>
+
+<p><strong>Note:</strong> See the diagram in the <em>Explanation</em> section for more details.</p></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>The first line contains two integers $n$ and $k$ &mdash; the number of chapters and the maximum number of problems per page respectively. <br>
+The second line contains $n$ integers $t_1, t_2, \ldots, t_n$, where $t_i$ denotes the number of problems in the $i$-th chapter.</p>
+
+<p><strong>Constraints</strong></p>
+
+<ul>
+<li>$1 \le n, k, t_i \le 100$</li>
+</ul></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>Print the number of <em>special</em> problems in Lisa's workbook.</p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code>5 3  
+4 2 6 1 10
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>4
+</code></pre></div><div class='msB'><p><strong>Explanation</strong></p></div><div class='msB'><p>The diagram below depicts Lisa's workbook with $n = 5$ chapters and a maximum of $ k = 3$ problems per page. Special problems are outlined in red, and page numbers are in yellow squares.</p>
+
+<p><img src="https://s3.amazonaws.com/hr-challenge-images/17892/1456473832-d122786d1e-bear_workbook.png" title="bear_workbook.png" /></p>
+
+<p>There are $4$ special problems and thus we print the number $4$ on a new line.</p></div></body></html>

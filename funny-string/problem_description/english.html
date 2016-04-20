@@ -1,0 +1,21 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>Suppose you have a String, $S$, of length $N$ that is indexed from $0$ to $N-1$. You also have some String, $R$, that is <em>the reverse</em> of String $S$. $S$ is <em>funny</em> if the condition $|S[i]-S[i-1]| = |R[i]-R[i-1]|$ is true for every character $i$ from $1$ to $N-1$.</p>
+
+<p><strong>Note:</strong> For some String $S$, $S[i]$ denotes the <a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a> value of the $i^{th}$ $0$-indexed character in $S$. The <em>absolute value</em> of an integer, $x$, is written as $|x|$. </p></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>The first line contains an integer, $T$ (the number of test cases). <br>
+Each line $i$ of the $T$ subsequent lines contain a string, $S$.   </p></div><div class='msB'><p><strong>Constraints</strong></p></div><div class='msB'><ul>
+<li>$1 \leq T \leq 10$  </li>
+<li>$0 \leq i \leq T-1$       </li>
+<li>$2 \leq \text{length of }S \leq 10000$    </li>
+</ul></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>For each String $S_j$ (where $0 \le j \le T-1$), print whether it is $\texttt{Funny}$ or $\texttt{Not Funny}$ on a new line.</p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code>2
+acxz
+bcxz
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>Funny
+Not Funny
+</code></pre></div><div class='msB'><p><strong>Explanation</strong></p></div><div class='msB'><p><em>Test Case 0</em>: $S = \text{"acxz"}$ <br>
+$|c-a| = 2 = |x-z|$ <br>
+$|x-c| = 21 = |c-x|$ <br>
+$|z-x| = 2 = |a-c|$ <br>
+As each comparison is equal, we print $\texttt{Funny}$.  </p>
+
+<p><em>Test Case 1</em>: $S = \text{"bcxz"}$ <br>
+$|c-b| = 1$, but $|x-z| = 2$ <br>
+At this point, we stop evaluating $S$ (as $|c-b| \neq |x-z|$) and print $\texttt{Not Funny}$. </p></div></body></html>

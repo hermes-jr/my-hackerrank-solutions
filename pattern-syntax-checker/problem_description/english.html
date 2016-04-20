@@ -1,0 +1,12 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>Using <strong>Regex</strong>, we can easily match or search for patterns in a text. Before searching for a pattern, we have to specify one using some well-defined syntax.</p>
+
+<p>In this problem, you are given a pattern. You have to check whether the syntax of the given pattern is valid.</p>
+
+<p><strong>Note</strong>: In this problem, a regex is only valid if you can compile it using the  <a href="http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html#compile%28java.lang.String%29">Pattern.compile</a> method.</p></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>The first line of input contains an integer $N$, denoting the number of testcases. The next $N$ lines contain a string of any printable characters representing the pattern of a regex.</p></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>For each testcase, print <code>"Valid"</code> if the syntax of the given pattern is correct. Otherwise, print <code>"Invalid"</code>. Do not print the quotes.</p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code>3
+([A-Z])(.+)
+[AZ[a-z](a-z)
+batcatpat(nat
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>Valid
+Invalid
+Invalid
+</code></pre></div></body></html>

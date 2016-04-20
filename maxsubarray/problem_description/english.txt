@@ -1,0 +1,32 @@
+Given an array of ``N`` elements, find the contiguous and non-contiguous(not necessarily contiguous) subarray of maximium sum.
+
+**Input**  
+
+First line of the input has an integer ``T``. ``T`` cases follow 
+Each test case begins with an integer ``N``. In the next line, ``N`` integers follow. 
+
+**Output**  
+
+2 space separated integers denoting the maximum contiguous and non-contiguous subarray
+
+**Constraints:**  
+
+1 <= T <= 10 
+
+1 <= N <= 100,000 
+
+-10,000 <= Ai <= 10,000 
+
+**Sample cases**  
+
+**Input**  
+
+1 
+
+4 
+
+1 2 3 4
+    
+**Output**  
+
+10 10

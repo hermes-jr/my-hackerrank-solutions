@@ -1,0 +1,24 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p><sub>This challenge is part of a tutorial track by <a href="http://www.youtube.com/mycodeschool">MyCodeSchool</a></sub></p>
+
+<p>You’re given the pointer to the head node of a sorted doubly linked list and an integer to insert into the list. Create a node and insert it into the appropriate position in the list. The head node might be NULL to indicate that the list is empty.</p>
+
+<p><strong>Input Format</strong> <br>
+You have to complete the <code>Node* SortedInsert(Node* head, int data)</code> method which takes two arguments - the head of the sorted, doubly linked list and the value to insert. You should NOT read any input from stdin/console.</p>
+
+<p><strong>Output Format</strong> <br>
+Create a node with the given data and insert it into the given list, making sure that the new list is also sorted. Then <code>return</code> the head node of the updated list. Do NOT print anything to stdout/console.</p>
+
+<p><strong>Sample Input</strong>  </p>
+
+<p>NULL , data = 2 <br>
+NULL &lt;-- 2 &lt;--> 4 &lt;--> 6 --> NULL  , data = 5</p>
+
+<p><strong>Sample Output</strong></p>
+
+<pre><code>NULL &lt;-- 2 --&gt; NULL
+NULL &lt;-- 2 &lt;--&gt; 4 &lt;--&gt; 5 &lt;--&gt; 6 --&gt; NULL
+</code></pre>
+
+<p><strong>Explanation</strong> <br>
+1. We have an empty list, 2 is inserted. <br>
+2. Data 5 is inserted such as list remains sorted. </p></div></body></html>

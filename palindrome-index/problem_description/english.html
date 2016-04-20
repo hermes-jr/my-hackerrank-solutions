@@ -1,0 +1,22 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>Given a string of lowercase letters, determine the index of the character whose removal will make the string a palindrome. If the string is already a palindrome, then print <strong>$-1$</strong>. There will always be a valid solution. </p></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>The first line contains $T$ (the number of test cases). <br>
+The $T$ subsequent lines of test cases each contain a single string to be checked.  </p>
+
+<p><strong>Constraints</strong> <br>
+$1 \le T \le 20$ <br>
+$1 \le$ <em>length of string</em> $\le 100005$ <br>
+All characters are Latin lower case indexed. </p></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>Print the <em>zero-indexed</em> position (integer) of a character whose deletion will result in a palindrome; if there is no such character (i.e.: the string is already a palindrome), print <strong>-1</strong>. Any correct answer will be accepted; e.g.: for a string such as <code>bcbc</code>, we can either remove <em>b</em> at index $0$ or <em>c</em> at index $3$&mdash;both answers are acceptable. </p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code>3
+aaab
+baa
+aaa
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>3
+0
+-1
+</code></pre></div><div class='msB'><p><strong>Explanation</strong></p></div><div class='msB'><p><em>Test Case 1($aaab$):</em> Removing <em>b</em> at index $3$ results in a palindrome, so we print <strong>3</strong>.    </p>
+
+<p><em>Test Case 2($baa$):</em> Removing <em>b</em> at index $0$ results in a palindrome, so we print <strong>0</strong>.</p>
+
+<p><em>Test Case 3($aaa$):</em> This string is already a palindrome, so we print <strong>-1</strong>; however, <strong>0</strong>, <strong>1</strong>, and <strong>2</strong> are also all acceptable answers, as the string will still be a palindrome if any one of the characters at those indices are removed.</p>
+
+<p><strong>Custom Checker logic</strong>  </p>
+
+<p><a href="https://gist.github.com/shashank21j/58df3865a95bf960092c">https://gist.github.com/shashank21j/58df3865a95bf960092c</a></p></div></body></html>

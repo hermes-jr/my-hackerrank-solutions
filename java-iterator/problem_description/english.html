@@ -1,0 +1,40 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>Java Iterator class can help you to iterate through every elements in an collection. Here is a simple example:</p>
+
+<pre><code>import java.util.*;
+public class Example
+{
+
+    public static void main(String []argh)
+    {
+        ArrayList mylist = new ArrayList();
+        mylist.add("Hello");
+        mylist.add("Java");
+        mylist.add("4");
+        Iterator it=mylist.iterator();
+        while(it.hasNext())
+        {
+            Object element = it.next();
+            System.out.println((String)element);
+        }
+    }
+}
+</code></pre>
+
+<p>In this problem you need to complete a method <em>func</em>. The method takes an <em>ArrayList</em> as input. In that <em>ArrayList</em> there is one or more integer numbers, then there is a special string "###", after that there are one or more other strings. A sample <em>ArrayList</em> may look like this:</p>
+
+<pre><code>element[0]=&gt;42
+element[1]=&gt;10
+element[2]=&gt;"###"
+element[3]=&gt;"Hello"
+element[4]=&gt;"Java"
+</code></pre>
+
+<p>You have to modify the <em>func</em> method by editing at most $2$ lines so that the code only prints the elements after the special string "###". For the sample above the output will be:</p>
+
+<pre><code>Hello
+Java
+</code></pre>
+
+<p><em>Note:</em> The stdin doesn't contain the string <em>"###"</em>, it is added in the <em>main</em> method.  </p>
+
+<p>To restore the original code in the editor, click the top left icon on the editor and create a new buffer.</p></div></body></html>

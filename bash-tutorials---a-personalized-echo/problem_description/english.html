@@ -1,0 +1,78 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>Write a Bash script which accepts $name$ as input and displays a greeting:
+"Welcome (name)"</p>
+
+<p><strong>Input Format</strong> <br>
+One line, containing a $name$.    </p>
+
+<p><strong>Output Format</strong> <br>
+One line: "Welcome (name)" (quotation marks excluded). <br>
+The evaluation will be case-sensitive.</p>
+
+<p><strong>Sample Input 0</strong>  </p>
+
+<pre><code>Dan  
+</code></pre>
+
+<p><strong>Sample Output 0</strong>  </p>
+
+<pre><code>Welcome Dan  
+</code></pre>
+
+<p><strong>Sample Input 1</strong>  </p>
+
+<pre><code>Prashant
+</code></pre>
+
+<p><strong>Sample Output 1</strong>  </p>
+
+<pre><code>Welcome Prashant
+</code></pre>
+
+<p><strong>A quick introduction to 'Echo'</strong>  </p>
+
+<p>This is the equivalent of common output commands in most programming language (print or puts statements).  </p>
+
+<p><em>For Example:</em>  </p>
+
+<pre><code>echo "Greetings"
+</code></pre>
+
+<p>This outputs just one word "Greetings" (without the quotation marks).  </p>
+
+<pre><code>echo "Greetings `$USER, your current working directory is $`PWD"
+</code></pre>
+
+<p>This picks up the values of the environment variables $USER$ and $PWD$ and displays something like:  </p>
+
+<pre><code>Greetings prashantb1984, your current working directory is /home/prashantb1984  
+</code></pre>
+
+<p>The above message, of course, will vary from system to system, depending on the setting of environment variables.</p>
+
+<p><strong>Accepting Inputs</strong>  </p>
+
+<p>This can be accomplished using the <em>read</em> statement. </p>
+
+<pre><code>read number
+echo "The number you have entered is $number"  
+</code></pre>
+
+<p>If the user provides an input <em>4</em>, the output is:  </p>
+
+<pre><code>The number you have entered is 4  
+</code></pre>
+
+<p>Consider this snippet:  </p>
+
+<pre><code>read name
+echo "The name you have entered is $name"  
+</code></pre>
+
+<p>If the user provides an input <em>Max</em>, the output is: <br>
+    The name you have entered is Max </p>
+
+<p><strong>Recommended Resources</strong>  </p>
+
+<p>A quick but useful tutorial for Bash newcomers is <a href="http://www.panix.com/~elflord/unix/bash-tute.html">here</a>. <br>
+Handling input is documented and explained quite well on <a href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_08_02.html">this page</a>. <br>
+<br></p></div></body></html>

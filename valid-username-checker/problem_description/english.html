@@ -1,0 +1,28 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>Regular expressions ($regexp$) help us match or search for patterns in strings. In this problem, you will be given a username. Your task is to check whether that username is valid. A valid username will have the following properties:</p>
+
+<ol>
+<li>The username can contain alphanumeric characters and/or underscores(_).</li>
+<li>The username must start with an alphabetic character.</li>
+<li>8 $\le$ |Username| $\le$ 30.</li>
+</ol>
+
+<p>To simplify your task, we have provided a portion of the code in the editor. You just need to write down the $regex$ pattern which will be used to validate the username input.</p></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>The first line of input contains an integer $N$, representing the number of testcases. Each of the next $N$ lines contains a string that represents a username. </p>
+
+<p><strong>Constraints</strong></p>
+
+<p>The username consists of any printable characters.</p>
+
+<p>$1\le N \le 50$</p></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>For each username, output <code>Valid</code> if the username is valid; otherwise, output <code>Invalid</code>.</p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><div class="highlight"><pre><span class="mi">4</span>
+<span class="n">alpha_naheed</span>
+<span class="n">xahidbuffon</span>
+<span class="n">nagib</span><span class="err">@</span><span class="mo">007</span>
+<span class="mi">123</span><span class="n">Swakkhar</span>
+</pre></div>
+</div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><div class="highlight"><pre><span class="n">Valid</span>
+<span class="n">Valid</span>
+<span class="n">Invalid</span>
+<span class="n">Invalid</span>
+</pre></div>
+</div><div class='msB'><p><strong>Explanation</strong></p></div><div class='msB'><p>The first two cases fulfill the constraints of a valid username. 
+The third case is invalid because it contains an invalid character <code>'@'</code>. 
+The fourth case is also invalid because it starts with a numeric character.</p></div></body></html>

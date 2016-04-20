@@ -1,0 +1,30 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'>
+
+<p>Given a word $w$, rearrange the letters of $w$ to construct another word $s$ in such a way that $s$ is lexicographically greater than $w$. In case of multiple possible answers, find the lexicographically smallest one among them.</p></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>The first line of input contains $t$, the number of test cases. Each of the next $t$ lines contains $w$.</p>
+
+<p><strong>Constraints</strong> <br>
+$1 \le t \le 10^5$ <br>
+$1 \le |w| \le 100$ <br>
+$w$ will contain only lower-case English letters and its length will not exceed $100$.</p></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>For each testcase, output a string lexicographically bigger than $w$ in a separate line. In case  of multiple possible answers, print the lexicographically smallest one, and if no answer exists, print <code>no answer</code>.</p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code>5
+ab
+bb
+hefg
+dhck
+dkhc
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>ba
+no answer
+hegf
+dhkc
+hcdk
+</code></pre></div><div class='msB'><p><strong>Explanation</strong></p></div><div class='msB'><ul>
+<li><em>Test case 1:</em> <br>
+There exists only one string greater than <code>ab</code> which can be built by rearranging <code>ab</code>. That is <code>ba</code>.  </li>
+<li><em>Test case 2:</em> <br>
+Not possible to rearrange <code>bb</code> and get a lexicographically greater string.  </li>
+<li><em>Test case 3:</em> <br>
+<code>hegf</code> is the next string lexicographically greater than <code>hefg</code>.</li>
+<li><em>Test case 4:</em> <br>
+<code>dhkc</code> is the next string lexicographically greater than <code>dhck</code>.</li>
+<li><em>Test case 5:</em> <br>
+<code>hcdk</code> is the next string lexicographically greater than <code>dkhc</code>.</li>
+</ul></div></body></html>

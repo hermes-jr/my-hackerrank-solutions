@@ -1,0 +1,62 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p><strong>Objective</strong> <br>
+In this challenge, we learn about using the Fibonacci Function.</p>
+
+<p><strong>Resources</strong> <br>
+Here's a helpful video on the topic:
+<div class="hackdown-video" style="height:351px;"><iframe sandbox="allow-scripts allow-same-origin" src="//www.youtube.com/embed/SjSHVDfXHQ4" width="600" height="350" frameborder="0" allowfullscreen> </iframe></div>   </p>
+
+<p><em>The Fibonacci Series</em>  </p>
+
+<p>The Fibonacci sequence begins with $0$ and $1$. These are the first and second terms, respectively. After this, every element is the sum of the preceding elements:</p>
+
+<pre><code>Fibonacci(n) = Fibonacci(n-1) + Fibonacci(n-2)  
+</code></pre>
+
+<p><strong>Task</strong> <br>
+Given the starter code, complete the Fibonacci function to return the $N$<sup>$th$</sup> term.  </p>
+
+<p>We start counting from <em>Fibonacci</em>$(1) = 0$.
+This might differ from some other notations that treats <em>Fibonacci</em>$(0) = 0$.</p>
+
+<p>The overall equation is:</p>
+
+<pre><code>             = 0 , n = 1
+Fibonacci(n) = 1 , n = 2
+               Fibonacci(n-1) + Fibonacci(n-2)  , n &gt; 2
+</code></pre>
+
+<p><strong>Input Format</strong> </p>
+
+<p>One line of input, the integer $N$.</p>
+
+<p><strong>Constraints</strong>  </p>
+
+<p>$0 &lt; N &lt;= 40$  </p>
+
+<p><strong>Output Format</strong>  </p>
+
+<p>Output one integer, the $N$<sup>$th$</sup> Fibonacci number.  </p>
+
+<p><strong>Sample Input</strong>  </p>
+
+<pre><code>3  
+</code></pre>
+
+<p><strong>Sample Output</strong>  </p>
+
+<pre><code>1  
+</code></pre>
+
+<p><strong>Function Prototype</strong> <br>
+The starter code is provided for Scala. The code for accepting the input and displaying the output is provided. You will be provided the input parameter $N$, and you need to return the $N$<sup>$th$</sup> Fibonacci term.  </p>
+
+<p><strong>Sample Input and Output Values for the Fibonacci Series</strong> </p>
+
+<pre><code>fibonacci(3) = (0+1) = 1  
+fibonacci(4) = (1+1) = 2  
+fibonacci(5) = (1+2) = 3  
+</code></pre>
+
+<p><strong>Requirements</strong> <br>
+Simple test cases can be cleared with a purely recursive function exponentially. To clear the more challenging test cases without violating the principles of functional programming, you might benefit from learning about <a href="http://fupeg.blogspot.in/2009/04/tail-recursion-in-scala.html">the accumulator technique</a>. <br>
+<br></p></div></body></html>

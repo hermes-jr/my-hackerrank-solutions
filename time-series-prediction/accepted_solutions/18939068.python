@@ -1,0 +1,34 @@
+import numpy as np
+import statsmodels.api as sm
+
+
+def sampling(data,prev):
+    n = len(data)
+    i = np.random.randint(prev, n - 1)
+    x = np.arange(i - prev, i)
+    return [data[t] for t in x], data[i]
+
+n = int(input())
+traffic = []
+for i in range(n):
+    traffic.append(int(input()))
+offset = 7
+last = 155
+X = []
+for t in range(n - last, n):
+    z = [t]
+    z.extend([1 if w == t % offset else 0 for w in range(offset)])
+    X.append(z)
+Y = traffic[-last:]
+r = sm.OLS(Y, X).fit()
+
+
+nextdays = []
+for t in range(30):
+    z = [n + t]
+    z.extend([1 if w == (n + t) % offset else 0 for w in range(offset)])
+    nextdays.append(z)
+ans = r.predict(nextdays)
+
+for x in ans:
+    print(x)

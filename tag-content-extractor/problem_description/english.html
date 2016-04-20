@@ -1,0 +1,29 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>In a tag-based language like <em>XML</em> or <em>HTML</em>, contents are enclosed between a <em>start tag</em> and an <em>end tag</em> like <code>&lt;tag&gt;contents&lt;/tag&gt;</code>. Note that the corresponding <em>end tag</em> starts with a <code>/</code>.</p>
+
+<p>Given a string of text in a tag-based language, parse this text and retrieve the contents enclosed within sequences of well-organized tags meeting the following criterion:</p>
+
+<ol>
+<li><p>The name of the <em>start</em> and <em>end</em> tags must be same. The HTML code <code>&lt;h1&gt;Hello World&lt;/h2&gt;</code> is <em>not valid</em>, because the text starts with an <code>h1</code> tag and ends with a non-matching <code>h2</code> tag.</p></li>
+<li><p>Tags can be nested, but content between nested tags is considered <em>not valid</em>. For example, in <code>&lt;h1&gt;&lt;a&gt;contents&lt;/a&gt;invalid&lt;/h1&gt;</code>, <code>contents</code> is <em>valid</em> but <code>invalid</code> is <em>not valid</em>.</p></li>
+<li><p>Tags can consist of any printable characters.</p></li>
+</ol></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>The first line of input contains a single integer, $N$ (the number of lines). <br>
+The $N$ subsequent lines each contain a line of text.</p>
+
+<p><strong>Constraints</strong>  </p>
+
+<ul>
+<li>$1 \leq N \leq 100$   </li>
+<li>Each line contains a maximum of $10^4$ printable characters.  </li>
+<li>The total number of characters in all test cases will not exceed $10^6$.</li>
+</ul></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>For each line, print the content enclosed within valid tags. <br>
+If a line contains multiple instances of valid content, print out each instance of valid content on a new line; if no valid content is found, print <code>None</code>.</p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code>4
+&lt;h1&gt;Nayeem loves counseling&lt;/h1&gt;
+&lt;h1&gt;&lt;h1&gt;Sanjay has no watch&lt;/h1&gt;&lt;/h1&gt;&lt;par&gt;So wait for a while&lt;/par&gt;
+&lt;Amee&gt;safat codes like a ninja&lt;/amee&gt;
+&lt;SA premium&gt;Imtiaz has a secret crush&lt;/SA premium&gt;
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>Nayeem loves counseling
+Sanjay has no watch
+So wait for a while
+None
+Imtiaz has a secret crush
+</code></pre></div></body></html>

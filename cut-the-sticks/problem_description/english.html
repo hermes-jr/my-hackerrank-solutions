@@ -1,0 +1,74 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>You are given $N$ sticks, where the <em>length</em> of each stick is a positive integer. A <em>cut operation</em> is performed on the sticks such that all of them are reduced by the length of the smallest stick.</p>
+
+<p>Suppose we have six sticks of the following lengths:<br>
+5 4 4 2 2 8</p>
+
+<p>Then, in one <em>cut operation</em> we make a cut of length <em>2</em> from each of the six sticks. For the next <em>cut operation</em> four sticks are left (of non-zero length), whose lengths are the following: <br>
+3 2 2 6</p>
+
+<p>The above step is repeated until no sticks are left.</p>
+
+<p>Given the length of $N$ sticks, print the number of sticks that are left before each subsequent <em>cut operations</em>.</p>
+
+<p><em>Note:</em> For each <em>cut operation</em>, you have to recalcuate the  length of smallest sticks (excluding zero-length sticks).</p>
+
+<p><strong>Input Format</strong> <br>
+The first line contains a single integer $N$. <br>
+The next line contains $N$ integers: <em>a<sub>0</sub>, a<sub>1</sub>,...a<sub>N-1</sub></em>  separated by space, where <em>a<sub>i</sub></em> represents the length of <em>i<sup>th</sup></em> stick.</p>
+
+<p><strong>Output Format</strong> <br>
+For each operation, print the number of sticks that are cut, on separate lines.  </p>
+
+<p><strong>Constraints</strong> <br>
+1 ≤ <em>N</em> ≤ 1000 <br>
+1 ≤ <em>a<sub>i</sub></em> ≤ 1000</p>
+
+<p><strong>Sample Input #00</strong></p>
+
+<pre><code>6
+5 4 4 2 2 8
+</code></pre>
+
+<p><strong>Sample Output #00</strong></p>
+
+<pre><code>6
+4
+2
+1
+</code></pre>
+
+<p><strong>Sample Input #01</strong></p>
+
+<pre><code>8
+1 2 3 4 3 3 2 1
+</code></pre>
+
+<p><strong>Sample Output #01</strong></p>
+
+<pre><code>8
+6
+4
+1
+</code></pre>
+
+<p><strong>Explanation</strong></p>
+
+<p><em>Sample Case #00 :</em> </p>
+
+<pre><code>sticks-length        length-of-cut   sticks-cut
+5 4 4 2 2 8             2               6
+3 2 2 _ _ 6             2               4
+1 _ _ _ _ 4             1               2
+_ _ _ _ _ 3             3               1
+_ _ _ _ _ _           DONE            DONE
+</code></pre>
+
+<p><em>Sample Case #01</em></p>
+
+<pre><code>sticks-length         length-of-cut   sticks-cut
+1 2 3 4 3 3 2 1         1               8
+_ 1 2 3 2 2 1 _         1               6
+_ _ 1 2 1 1 _ _         1               4
+_ _ _ 1 _ _ _ _         1               1
+_ _ _ _ _ _ _ _       DONE            DONE
+</code></pre></div></body></html>

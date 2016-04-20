@@ -1,0 +1,32 @@
+[Русский](https://hr-filepicker.s3.amazonaws.com/101may14/russian/2490-sherlock-and-array.pdf) \| 
+[中文](https://hr-filepicker.s3.amazonaws.com/101may14/chinese/2490-sherlock-and-array.pdf)<br/>
+Watson gives an array _A<sub>1</sub>,A<sub>2</sub>...A<sub>N</sub>_ to Sherlock. Then he asks him to find if there exists an element in the array, such that, the sum of elements on its left is equal to the sum of elements on its right. If there are no elements to left/right, then sum is considered to be zero.     
+Formally, find an _i_, such that, _A<sub>1</sub>+A<sub>2</sub>...A<sub>i-1</sub>_  = _A<sub>i+1</sub>+A<sub>i+2</sub>...A<sub>N</sub>_.
+
+**Input Format**  
+The first line contains _T_, the number of test cases. For each test case, the first line contains _N_, the number of elements in the array _A_. The second line for each testcase contains _N_ space separated integers, denoting the array _A_.   
+
+**Output Format**  
+For each test case, print `YES` if there exists an element in the array, such that, the sum of elements on its left is equal to the sum of elements on its right, else print `NO`.  
+
+**Constraints**  
+1 &le; T &le; 10    
+1 &le; N &le; 10<sup>5</sup>   
+1 &le; A<sub>i</sub> &le; 2*10<sup>4</sup> for 1 &le; i &le; N
+
+**Sample Input**   
+
+	2
+    3
+    1 2 3
+    4
+    1 2 3 3
+    
+**Sample Output**
+
+	NO
+    YES
+   
+**Explanation**  
+For test case 1, no such index exists.  
+For test case 2, $A[1] + A[2] = A[4]$, therefore index 3 satisfies.

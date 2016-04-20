@@ -1,0 +1,61 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>The previous version of Quicksort was easy to understand, but it was not optimal. It required copying the numbers into other arrays, which takes up  space and time. To make things faster, one can create an "in-place" version of Quicksort, where the numbers are all sorted within the array itself. </p>
+
+<p><strong>Challenge</strong> <br>
+Create an in-place version of Quicksort. You need to follow <a href="http://en.wikipedia.org/wiki/Quicksort#Algorithm">Lomuto Partitioning</a> method.  </p>
+
+<p><strong>Guideline</strong> <br>
+Instead of copying the array into multiple sub-arrays, use indices to keep track of the different sub-arrays. You can pass the indices to a modified <em>partition</em> method. The partition method should partition the sub-array and then return the index location where the pivot gets placed, so you can then call partition on each side of the pivot. </p>
+
+<ul>
+<li>Always select the <em>last</em> element in the 'sub-array' as a pivot. </li>
+<li>Partition the left side and then the right side of the sub-array. </li>
+<li>Print out the whole array at the end of every partitioning method.</li>
+<li>An array of length $1$ or less will be considered sorted, and there is no need to sort or to print them.</li>
+</ul>
+
+<p>Since you cannot just create new sub-arrays for the elements, partition method will need to use another trick to keep track of which elements are greater and which are lower than the pivot.</p>
+
+<p><strong>The In-place Trick</strong>  </p>
+
+<ul>
+<li>If an element is lower than the pivot, you should swap it with a larger element on the left-side of the sub-array.</li>
+<li>Greater elements should remain where they are.</li>
+<li>At the end of the partitioning method, the pivot should be swapped with the first element of the right partition, consisting of all larger elements, of the sub-array.</li>
+<li>To ensure that you don't swap a small element with another small element, use an index to keep track of the small elements that have already been swapped into their "place". </li>
+</ul>
+
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/8/84/Lomuto_animated.gif" alt="Lomuto-partitioning" title="" /></p>
+
+<p><strong>Input Format</strong> <br>
+There will be two lines of input:</p>
+
+<ul>
+<li>$n$ - the size of the array</li>
+<li>$ar$ - the $n$ numbers of the array</li>
+</ul>
+
+<p><strong>Output Format</strong> <br>
+Print the entire array on a new line at the end of every partitioning method. </p>
+
+<p><strong>Constraints</strong> <br>
+$1 \le n \le 5000$ <br>
+$-10000 \le x \le 10000, x ∈ ar$ <br>
+There are no duplicate numbers.</p>
+
+<p><strong>Sample Input</strong>  </p>
+
+<pre><code>7
+1 3 9 8 2 7 5
+</code></pre>
+
+<p><strong>Sample Output</strong>  </p>
+
+<pre><code>1 3 2 5 9 7 8
+1 2 3 5 9 7 8
+1 2 3 5 7 8 9
+</code></pre>
+
+<p><strong>Explanation</strong> <br>
+<em>5</em> is initally selected as the pivot, and the array is partitioned as shown in the diagram. The left side is partitioned next with <em>2</em> as the pivot. Finally, the right side is partitioned with <em>8</em> as the pivot. The entire array is now sorted. </p>
+
+<p><img src="https://s3.amazonaws.com/hr-challenge-images/quick-sort/QuickSortInPlace.png" alt="quick-sort-partition" title="" /></p></div></body></html>

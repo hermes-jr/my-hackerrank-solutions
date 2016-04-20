@@ -1,0 +1,31 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>Given two integers, $L$ and $R$, find the maximal value of $A$ <a href="http://en.wikipedia.org/wiki/Bitwise_operation#XOR">xor</a> $B$, where $A$ and $B$ satisfy the following condition:</p>
+
+<p>$L \le A \le B \le R$</p></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>The input contains two lines; $L$ is present in the first line and $R$ in the second line.   </p>
+
+<p><strong>Constraints</strong> <br>
+$1 \le L \le R \le 10$<sup>3</sup>  </p></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>The maximal value as mentioned in the problem statement.</p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code>10
+15
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>7
+</code></pre></div><div class='msB'><p><strong>Explanation</strong></p></div><div class='msB'><p>The input tells us that $L = 10$ and $R = 15$. All the pairs which comply to above condition are the following: <br>
+$10 \oplus 10 = 0$ <br>
+$10 \oplus 11 = 1$ <br>
+$10 \oplus 12 = 6$ <br>
+$10 \oplus 13 = 7$ <br>
+$10 \oplus 14 = 4$ <br>
+$10 \oplus 15 = 5$ <br>
+$11 \oplus 11 = 0$ <br>
+$11 \oplus 12 = 7$ <br>
+$11 \oplus 13 = 6$ <br>
+$11 \oplus 14 = 5$ <br>
+$11 \oplus 15 = 4$ <br>
+$12 \oplus 12 = 0$ <br>
+$12 \oplus 13 = 1$ <br>
+$12 \oplus 14 = 2$ <br>
+$12 \oplus 15 = 3$ <br>
+$13 \oplus 13 = 0$ <br>
+$13 \oplus 14 = 3$ <br>
+$13 \oplus 15 = 2$ <br>
+$14 \oplus 14 = 0$ <br>
+$14 \oplus 15 = 1$ <br>
+$15 \oplus 15 = 0$ <br>
+Here two pairs <em>(10, 13)</em> and <em>(11, 12)</em> have maximum xor value <em>7</em>, and this is the answer. </p></div></body></html>

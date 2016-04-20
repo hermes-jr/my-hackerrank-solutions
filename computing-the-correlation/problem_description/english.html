@@ -1,0 +1,75 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>You are given the scores of <strong>N</strong> students in three different subjects - <strong>Mathematics</strong>,*<em>Physics</em>* and <strong>Chemistry</strong>; all of which have been graded on a scale of 0 to 100. Your task is to compute the Pearson product-moment correlation coefficient between the scores of different pairs of subjects (Mathematics and Physics, Physics and Chemistry, Mathematics and Chemistry) based on this data.
+<em>This data is based on the records of the CBSE K-12 Examination - a national school leaving examination in India, for the year 2013.</em>  </p>
+
+<p><strong>Pearson product-moment correlation coefficient</strong>  </p>
+
+<p>This is a measure of linear correlation described well <a href="http://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient">on this Wikipedia page</a>. The formula, in brief, is given by: <br>
+<img src="http://upload.wikimedia.org/math/c/a/6/ca68fbe94060a2591924b380c9bc4e27.png" alt="" title="" />  </p>
+
+<p>where <strong>x</strong> and <strong>y</strong> denote the two vectors between which the correlation is to be measured.  </p>
+
+<p><strong>Input Format</strong>    </p>
+
+<p>The first row contains an integer <strong>N</strong>. <br>
+This is followed by <strong>N</strong> rows containing three tab-space (<em>'\t'</em>) separated integers, <strong>M P C</strong> corresponding to a candidate's scores in Mathematics, Physics and Chemistry respectively. <br>
+Each row corresponds to the scores attained by a unique candidate in these three subjects.</p>
+
+<p><strong>Input Constraints</strong>  </p>
+
+<p>1 &lt;= N &lt;= 5 x 10<sup>5</sup> <br>
+0 &lt;= <strong>M, P, C</strong> &lt;= 100</p>
+
+<p><strong>Output Format</strong>    </p>
+
+<p>The output should contain three lines, with correlation coefficients computed <br>
+and rounded off <strong>correct to exactly 2 decimal places</strong>. <br>
+The first line should contain the correlation coefficient between Mathematics and Physics scores. <br>
+The second line should contain the correlation coefficient between Physics and Chemistry scores. <br>
+The third line should contain the correlation coefficient between Chemistry  and Mathematics scores.</p>
+
+<p>So, your output should look like this (these values are only for explanatory purposes):</p>
+
+<pre><code>0.12
+0.13
+0.95
+</code></pre>
+
+<p><strong>Test Cases</strong>  </p>
+
+<p>There is one sample test case with scores obtained in Mathematics, Physics and Chemistry by 20 students.
+The hidden test case contains the scores obtained by all the candidates who appeared for the examination and took all three tests (Mathematics, Physics and Chemistry). <br>
+<strong><em>Think:</em>*</strong> How can you efficiently compute the correlation coefficients within the given time constraints, while handling the scores of nearly 400k students?*</p>
+
+<p><strong>Sample Input</strong>    </p>
+
+<pre><code>20
+73  72  76
+48  67  76
+95  92  95
+95  95  96
+33  59  79
+47  58  74
+98  95  97
+91  94  97
+95  84  90
+93  83  90
+70  70  78
+85  79  91
+33  67  76
+47  73  90
+95  87  95
+84  86  95
+43  63  75
+95  92  100
+54  80  87
+72  76  90
+</code></pre>
+
+<p><strong>Sample Output</strong>  </p>
+
+<pre><code>0.89  
+0.92  
+0.81
+</code></pre>
+
+<p>There is <strong>no special library support</strong> available for this challenge.  </p></div></body></html>

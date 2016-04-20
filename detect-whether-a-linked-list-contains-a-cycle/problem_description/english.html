@@ -1,0 +1,33 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p><sub>This challenge is part of a tutorial track by <a href="http://www.youtube.com/mycodeschool">MyCodeSchool</a></sub></p>
+
+<p>You’re given the pointer to the head node of a linked list. Find whether the list contains any cycle (or loop). A linked list is said to contain cycle if any node is <em>re-visited</em> while traversing the list. The head pointer given may be null meaning that the list is empty.</p>
+
+<p><strong>Input Format</strong> <br>
+You have to complete the <code>int HasCycle(Node* head)</code> method which takes one argument - the head of the linked list. You should NOT read any input from stdin/console. Number of nodes in a linked list doesn't exceed 100.</p>
+
+<p><strong>Output Format</strong> <br>
+Check whether the linked list has a cycle and <code>return 1</code> if there is a cycle. Otherwise, <code>return 0</code>. Do NOT print anything to stdout/console.</p>
+
+<p><strong>Sample Input</strong>  </p>
+
+<pre><code>1 --&gt; NULL
+
+1 --&gt; 2 --&gt; 3
+      ^     |
+      |     |
+       -----                           
+</code></pre>
+
+<p><strong>Sample Output</strong></p>
+
+<pre><code>0
+1
+</code></pre>
+
+<p><strong>Explanation</strong> <br>
+1. First list has no cycle, hence return 0 <br>
+2. Second list is shown to have a cycle, hence return 1. </p>
+
+<p><strong>Note</strong> <br>
+After first solving the problem by yourself, see <a href="http://en.wikipedia.org/wiki/Cycle_detection#Tortoise_and_hare">Floyd's cycle-finding algorithm</a> for an
+efficient solution which uses O(N) time and O(1) additional memory.  </p></div></body></html>

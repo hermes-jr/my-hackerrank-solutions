@@ -1,0 +1,47 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>Java has 8 primitive data types; <em>char, boolean, byte, short, int, long, float, and double</em>. For this exercise, we'll work with the primitives used to hold integer values (<em>byte, short, int,</em> and <em>long</em>):</p>
+
+<ul>
+<li>A <em>byte</em> is an 8-bit signed integer.</li>
+<li>A <em>short</em> is a 16-bit signed integer.</li>
+<li>An <em>int</em> is a 32-bit signed integer.</li>
+<li>A <em>long</em> is a 64-bit signed integer.</li>
+</ul>
+
+<p>Given an input integer, you must determine which primitive data types are capable of properly storing that input.</p>
+
+<p>To get you started, a portion of the solution is provided for you in the editor.</p>
+
+<p><strong>Reference:</strong> <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html</a></p></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>The first line contains an integer, $T$, denoting the number of test cases. <br>
+Each test case, $T$, is comprised of a single line with an integer, $n$, which can be arbitrarily large or small.</p></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>For each input variable $n$ and appropriate primitive $dataType$, you must determine if the given primitives are capable of storing it. If yes, then print: </p>
+
+<pre><code>n can be fitted in:
+* dataType
+</code></pre>
+
+<p>If there is more than one appropriate data type, print each one on its own line and order them by size (i.e.: $byte &lt; short &lt; int &lt; long$).</p>
+
+<p>If the number cannot be stored in one of the four aforementioned primitives, print the line:</p>
+
+<pre><code>n can't be fitted anywhere.
+</code></pre></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code>5
+-150
+150000
+1500000000
+213333333333333333333333333333333333
+-100000000000000
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>-150 can be fitted in:
+* short
+* int
+* long
+150000 can be fitted in:
+* int
+* long
+1500000000 can be fitted in:
+* int
+* long
+213333333333333333333333333333333333 can't be fitted anywhere.
+-100000000000000 can be fitted in:
+* long
+</code></pre></div><div class='msB'><p><strong>Explanation</strong></p></div><div class='msB'><p>$-150$ can be stored in a <em>short</em>, an <em>int</em>, or a <em>long</em>.</p>
+
+<p>$213333333333333333333333333333333333$ is very large and is outside of the allowable range of values for the primitive data types discussed in this problem.</p></div></body></html>

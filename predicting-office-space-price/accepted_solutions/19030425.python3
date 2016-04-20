@@ -1,0 +1,23 @@
+# solution by charles-wangkai. just want to compare
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import PolynomialFeatures
+import numpy as np
+
+F, N = map(int, input().split())
+featuresList = []
+targets = []
+for _ in range(N):
+    fields = list(map(float, input().split()))
+    featuresList.append(fields[:-1])
+    targets.append(fields[-1])
+
+poly = PolynomialFeatures(degree=3)
+
+regression = LinearRegression()
+regression.fit(poly.fit_transform(np.array(featuresList)), targets)
+
+T = int(input())
+for _ in range(T):
+    features = list(map(float, input().split()))
+    vanga = regression.predict(poly.fit_transform(np.array(features)))[0]
+    print(round(vanga, 2))

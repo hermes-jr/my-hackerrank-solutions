@@ -1,0 +1,40 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>You are given a 2D array with dimensions 6*6. An hourglass in an array is defined as a portion shaped like this:</p>
+
+<pre><code>a b c
+  d
+e f g
+</code></pre>
+
+<p>For example, if we create an hourglass using the number 1 within an array full of zeros, it may look like this:</p>
+
+<pre><code>1 1 1 0 0 0
+0 1 0 0 0 0
+1 1 1 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+</code></pre>
+
+<p>Actually, there are many hourglasses in the array above. The three topmost hourglasses are the following:</p>
+
+<pre><code>1 1 1     1 1 0     1 0 0
+  1         0         0
+1 1 1     1 1 0     1 0 0
+</code></pre>
+
+<p>The sum of an hourglass is the sum of all the numbers within it. The sum for the hourglasses above are 7, 4, and 2, respectively.</p>
+
+<p>In this problem, you have to <em>print the largest sum among all the hourglasses</em> in the array.</p>
+
+<p><strong>Note:</strong> If you have already solved the problem "Java 2D array" in the data structures chapter of the Java domain, you may skip this challenge.</p></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>There will be exactly 6 lines of input, each containing 6 integers separated by spaces. Each integer will be between -9 and 9, inclusively.</p></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>Print the answer to this problem on a single line.</p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code>1 1 1 0 0 0
+0 1 0 0 0 0
+1 1 1 0 0 0
+0 0 2 4 4 0
+0 0 0 2 0 0
+0 0 1 2 4 0
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><p>19</p></div><div class='msB'><p><strong>Explanation</strong></p></div><div class='msB'><p>The hourglass possessing the largest sum is:</p>
+
+<pre><code>2 4 4
+  2
+1 2 4
+</code></pre></div></body></html>

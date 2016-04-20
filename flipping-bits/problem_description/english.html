@@ -1,0 +1,13 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>You will be given a list of 32 bits unsigned integers. You are required to output the list of the unsigned integers you get by flipping bits in its binary representation (i.e. unset bits must be set, and set bits must be unset).</p></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>The first line of the input contains the list size $T$, which is followed by $T$ lines, each line having an integer from the list.</p>
+
+<p><strong>Constraints</strong></p>
+
+<p>$1 \le T \le 100$ <br>
+$0 \le integer \lt 2^{32}$</p></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>Output one line per element from the list with the requested result.</p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code>3 
+2147483647 
+1 
+0
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>2147483648 
+4294967294 
+4294967295
+</code></pre></div><div class='msB'><p><strong>Explanation</strong></p></div><div class='msB'><p>Take <em>1</em> for example, as unsigned 32-bits is <em>00000000000000000000000000000001</em> and doing the flipping we get <em>11111111111111111111111111111110</em> which in turn is <em>4294967294</em>.</p></div></body></html>

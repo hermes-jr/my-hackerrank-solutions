@@ -1,0 +1,21 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>Julius Caesar protected his confidential information by encrypting it in a cipher. Caesar's cipher rotated every letter in a string by a fixed number, $K$, making it unreadable by his enemies. Given a string, $S$, and a number, $K$, encrypt $S$ and print the resulting string.   </p>
+
+<p><strong>Note:</strong> The cipher <em>only</em> encrypts letters; symbols, such as <code>-</code>, remain unencrypted. </p></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>The first line contains an integer, $N$, which is the length of the unencrypted string. <br>
+The second line contains the unencrypted string, $S$. <br>
+The third line contains the integer encryption key, $K$, which is the number of letters to rotate.</p>
+
+<p><strong>Constraints</strong> <br>
+$1 \le N \le 100$ <br>
+$0 \le K \le 100$ <br>
+$S$ is a valid ASCII string and doesn't contain any spaces.  </p></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>For each test case, print the encoded string.  </p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code>11
+middle-Outz
+2
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>okffng-Qwvb
+</code></pre></div><div class='msB'><p><strong>Explanation</strong></p></div><div class='msB'><p>Each unencrypted letter is replaced with the letter occurring $K$ spaces after it when listed alphabetically. Think of the alphabet as being both case-sensitive and circular; if $K$ rotates past the end of the alphabet, it loops back to the beginning (i.e.: the letter after $z$ is $a$, and the letter after $Z$ is $A$).</p>
+
+<p><strong>Selected Examples:</strong> <br>
+$m$ (ASCII 109) becomes $o$ (ASCII 111). <br>
+$i$ (ASCII 105) becomes $k$ (ASCII 107). <br>
+$-$ remains the same, as symbols are not encoded. <br>
+$O$ (ASCII 79) becomes $Q$ (ASCII 81). <br>
+$z$ (ASCII 122) becomes $b$ (ASCII 98); because $z$ is the last letter of the alphabet, $a$ (ASCII 97) is the next letter after it in lower-case rotation.</p></div></body></html>

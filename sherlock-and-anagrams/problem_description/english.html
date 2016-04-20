@@ -1,0 +1,58 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>Given a string $S$, find the number of "<a href="http://en.wikipedia.org/wiki/Unordered_pair">unordered</a> <a href="http://en.wikipedia.org/wiki/Anagram">anagrammatic</a> pairs" of substrings.    </p>
+
+<p><strong>Input Format</strong> <br>
+First line contains $T$, the number of testcases. Each testcase consists of string $S$ in one line.  </p>
+
+<p><strong>Constraints</strong> <br>
+$1 \le T \le 10$ <br>
+$2 \le length(S) \le 100$ <br>
+String $S$ contains only the lowercase letters of the English alphabet.  </p>
+
+<p><strong>Output Format</strong> <br>
+For each testcase, print the required answer in one line.</p>
+
+<p><strong>Sample Input#00</strong>  </p>
+
+<pre><code>2
+abba
+abcd
+</code></pre>
+
+<p><strong>Sample Output#00</strong>  </p>
+
+<pre><code>4
+0
+</code></pre>
+
+<p><strong>Sample Input#01</strong>  </p>
+
+<pre><code>5
+ifailuhkqq
+hucpoltgty
+ovarjsnrbf
+pvmupwjjjf
+iwwhrlkpek
+</code></pre>
+
+<p><strong>Sample Output#01</strong></p>
+
+<pre><code>3
+2
+2
+6
+3
+</code></pre>
+
+<p><strong>Explanation</strong>  </p>
+
+<p><strong>Sample00</strong> <br>
+Let's say $S[i,j]$ denotes the substring $S_i,S_{i+1}, \cdots,S_j$.  </p>
+
+<p>testcase 1: <br>
+For S=<code>abba</code>, anagrammatic pairs are: $\{S[1,1],S[4,4]\}$, $\{S[1,2],S[3,4]\}$, $\{S[2,2],S[3,3]\}$ and $\{S[1,3],S[2,4]\}$.</p>
+
+<p>testcase 2: <br>
+No anagrammatic pairs.</p>
+
+<p><strong>Sample01</strong> <br>
+Left as an exercise to you.  </p></div></body></html>

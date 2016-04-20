@@ -1,0 +1,52 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><pre><code>Exception handling is the process of responding to the occurrence, during computation, of exceptions – anomalous or exceptional conditions requiring special processing – often changing the normal flow of program execution. (Wikipedia)
+</code></pre>
+
+<p>Java has built-in mechanism to handle exceptions. Using the <em>try</em> statement we can test a block of code for errors. The <em>catch</em> block contains the code that says what to do if exception occurs. </p>
+
+<p>This problem will test your knowledge on try-catch block.</p>
+
+<p>You will be given two integers $x$ and $y$ as input, you have to compute x/y. If x and y are not 32 bit signed integers or if y is zero, exception will occur and you have to report it. Read sample Input/Output to know what to report in case of exceptions.</p>
+
+<p><strong>Sample Input 1:</strong></p>
+
+<pre><code>10
+3
+</code></pre>
+
+<p><strong>Sample Output 1:</strong></p>
+
+<pre><code>3
+</code></pre>
+
+<p><strong>Sample Input 2:</strong></p>
+
+<pre><code>10
+Hello
+</code></pre>
+
+<p><strong>Sample Output 2:</strong></p>
+
+<pre><code>java.util.InputMismatchException
+</code></pre>
+
+<p><strong>Sample Input 3:</strong></p>
+
+<pre><code>10
+0
+</code></pre>
+
+<p><strong>Sample Output 3:</strong></p>
+
+<pre><code>java.lang.ArithmeticException: / by zero
+</code></pre>
+
+<p><strong>Sample Input 4:</strong></p>
+
+<pre><code>23.323
+0
+</code></pre>
+
+<p><strong>Sample Output 4:</strong></p>
+
+<pre><code>java.util.InputMismatchException
+</code></pre></div></body></html>

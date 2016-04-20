@@ -1,0 +1,122 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>You are given a 2D  matrix, <em>a</em>, of dimension <em>MxN</em> and a positive integer <em>R</em>. You have to rotate the matrix <em>R</em> times and print the resultant matrix. Rotation should be in anti-clockwise direction.  </p>
+
+<p>Rotation of a <em>4x5</em> matrix is represented by the following figure. Note that in one rotation, you have to shift elements by one step only (refer sample tests for more clarity).</p>
+
+<p><img src="https://hr-challenge-images.s3.amazonaws.com/2517/matrix-rotation.png" alt="matrix-rotation" title="" /></p>
+
+<p>It is guaranteed that the minimum of <em>M</em> and <em>N</em> will be even.  </p>
+
+<p><strong>Input Format</strong> <br>
+First line contains three space separated integers, <em>M</em>, <em>N</em> and <em>R</em>, where <em>M</em> is the number of rows, <em>N</em> is number of columns in matrix, and <em>R</em> is the number of times the matrix has to be rotated. <br>
+Then <em>M</em> lines follow, where each line contains <em>N</em> space separated positive integers. These <em>M</em> lines  represent the matrix.  </p>
+
+<p><strong>Output Format</strong> <br>
+Print the rotated matrix.</p>
+
+<p><strong>Constraints</strong> <br>
+2 &lt;= <em>M</em>, <em>N</em> &lt;= 300 <br>
+1 &lt;= <em>R</em> &lt;= 10<sup>9</sup> <br>
+min(<em>M, N</em>) % 2 == 0 <br>
+1 &lt;= <em>a<sub>ij</sub></em> &lt;= 10<sup>8</sup>, where <em>i</em> &isin; <em>[1..M]</em> &amp; <em>j</em> &isin; <em>[1..N]</em>  </p>
+
+<p><strong>Sample Input #00</strong></p>
+
+<pre><code>4 4 1
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+</code></pre>
+
+<p><strong>Sample Output #00</strong></p>
+
+<pre><code>2 3 4 8
+1 7 11 12
+5 6 10 16
+9 13 14 15
+</code></pre>
+
+<p><strong>Sample Input #01</strong></p>
+
+<pre><code>4 4 2
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+</code></pre>
+
+<p><strong>Sample Output #01</strong></p>
+
+<pre><code>3 4 8 12
+2 11 10 16
+1 7 6 15
+5 9 13 14
+</code></pre>
+
+<p><strong>Sample Input #02</strong></p>
+
+<pre><code>5 4 7
+1 2 3 4
+7 8 9 10
+13 14 15 16
+19 20 21 22
+25 26 27 28
+</code></pre>
+
+<p><strong>Sample Output #02</strong></p>
+
+<pre><code>28 27 26 25
+22 9 15 19
+16 8 21 13
+10 14 20 7
+4 3 2 1
+</code></pre>
+
+<p><strong>Sample Input #03</strong></p>
+
+<pre><code>2 2 3
+1 1
+1 1
+</code></pre>
+
+<p><strong>Sample Output #03</strong></p>
+
+<pre><code>1 1
+1 1
+</code></pre>
+
+<p><strong>Explanation</strong> <br>
+<em>Sample Case #00:</em> Here is an illustration of what happens when the matrix is rotated once.</p>
+
+<pre><code> 1  2  3  4      2  3  4  8
+ 5  6  7  8      1  7 11 12
+ 9 10 11 12  -&gt;  5  6 10 16
+13 14 15 16      9 13 14 15
+</code></pre>
+
+<p><em>Sample Case #01:</em> Here is what happens when to the matrix after two rotations.</p>
+
+<pre><code> 1  2  3  4      2  3  4  8      3  4  8 12
+ 5  6  7  8      1  7 11 12      2 11 10 16
+ 9 10 11 12  -&gt;  5  6 10 16  -&gt;  1  7  6 15
+13 14 15 16      9 13 14 15      5  9 13 14
+</code></pre>
+
+<p><em>Sample Case #02:</em> Following are the intermediate states.</p>
+
+<pre><code>1  2  3  4      2  3  4 10    3  4 10 16    4 10 16 22
+7  8  9 10      1  9 15 16    2 15 21 22    3 21 20 28
+13 14 15 16 -&gt;  7  8 21 22 -&gt; 1  9 20 28 -&gt; 2 15 14 27 -&gt;
+19 20 21 22    13 14 20 28    7  8 14 27    1  9  8 26
+25 26 27 28    19 25 26 27    13 19 25 26   7 13 19 25
+
+
+
+10 16 22 28    16 22 28 27    22 28 27 26    28 27 26 25
+ 4 20 14 27    10 14  8 26    16  8  9 25    22  9 15 19
+ 3 21  8 26 -&gt;  4 20  9 25 -&gt; 10 14 15 19 -&gt; 16  8 21 13
+ 2 15  9 25     3 21 15 19     4 20 21 13    10 14 20  7
+ 1  7 13 19     2  1  7 13     3  2  1  7     4  3  2  1
+</code></pre>
+
+<p><em>Sample Case #03:</em> As all elements are same, any rotation will reflect the same matrix.</p></div></body></html>

@@ -1,0 +1,25 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>Your local library needs your help! Given the expected and actual return dates for a library book, create a program that calculates the fine (if any). The fee structure is as follows: </p>
+
+<ol>
+<li>If the book is returned on or before the expected return date, no fine will be charged (i.e.: $fine = 0)$.</li>
+<li>If the book is returned after the expected return <em>day</em> but still within the same calendar month and year as the expected return date, $fine = 15 \text{ Hackos } \times \text{ (the number of days late)}$. </li>
+<li>If the book is returned after the expected return <em>month</em> but still within the same calendar year as the expected return date, the $fine = 500 \text{ Hackos } \times \text{ (the number of months late)}$.   </li>
+<li>If the book is returned after the calendar <em>year</em> in which it was expected, there is a fixed fine of $10000 \text{ Hackos}$.</li>
+</ol></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>The first line contains $3$ space-separated integers denoting the respective $day$, $month$, and $year$ on which the book was <em>actually</em> returned. <br>
+The second line contains $3$ space-separated integers denoting the respective $day$, $month$, and $year$ on which the book was <em>expected</em> to be returned (due date).</p></div><div class='msB'><p><strong>Constraints</strong></p></div><div class='msB'><ul>
+<li>$1 \le D \le 31$      </li>
+<li>$1 \le M \le 12$      </li>
+<li>$1 \le Y \le 3000$  </li>
+<li>$\text{It is guaranteed that the dates will be valid Gregorian calendar dates.}$  </li>
+</ul></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>Print a single integer denoting the library fine for the book received as input.  </p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code>9 6 2015
+6 6 2015
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>45
+</code></pre></div><div class='msB'><p><strong>Explanation</strong></p></div><div class='msB'><p>Given the following return dates: <br>
+Actual: $D_a = 9, M_a = 6, Y_a = 2015$ <br>
+Expected: $D_e = 6, M_e = 6, Y_e = 2015$</p>
+
+<p>Because $Y_e \equiv Y_a$, we know it is less than a year late. <br>
+Because $M_e \equiv M_a$, we know it's less than a month late. <br>
+Because $D_e \lt D_a$, we know that it was returned late (but still within the same month and year).    </p>
+
+<p>Per the library's fee structure, we know that our fine will be $15 \text{ Hackos } \times \text{ (# days late)}$. We then print the result of $15 \times (D_a - D_e) = 15 \times (9 - 6) = 45$ as our output.</p></div></body></html>

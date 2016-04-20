@@ -1,0 +1,34 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>In computer science, a double-ended queue (dequeue, often abbreviated to deque, pronounced deck) is an abstract data type that generalizes a queue, for which elements can be added  to or removed from either the front (head) or back (tail).</p>
+
+<p>Deque interfaces can be implemented using various types of collections such as <code>LinkedList</code> or <code>ArrayDeque</code> classes. For example, deque can be declared as:</p>
+
+<pre><code>Deque deque = new LinkedList&lt;&gt;();
+or
+Deque deque = new ArrayDeque&lt;&gt;();
+</code></pre>
+
+<p>You can find more details about Deque <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Deque.html">here</a>.</p>
+
+<p>In this problem, you are given $N$ integers. You need to find the maximum number of unique integers among all the possible contiguous subarrays of size $M$.</p>
+
+<p><em>Note</em>: Time limit is $3$ second for this problem.</p></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>The first line of input contains two integers $N$ and $M$: representing the total number of integers and the size of the subarray, respectively. The next line contains $N$ space separated integers. </p>
+
+<p><strong>Constraints</strong></p>
+
+<p>$1 \le N \le 100000$<br>
+$1 \le M \le 100000$<br>
+$M\le N$<br>
+The numbers in the array will range between $[0,10000000]$.</p></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>Print the <em>maximum</em> number of unique integers among all possible contiguous subarrays of size $M$.</p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code>6 3
+5 3 5 2 3 2
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>3
+</code></pre></div><div class='msB'><p><strong>Explanation</strong></p></div><div class='msB'><p>In the sample testcase, there are 4 subarrays of contiguous numbers.</p>
+
+<p>$s1=\langle 5, 3, 5 \rangle$ - Has $2$ unique numbers.</p>
+
+<p>$s2=\langle 3, 5, 2 \rangle$ - Has $3$ unique numbers.</p>
+
+<p>$s3=\langle 5, 2, 3 \rangle$ - Has $3$ unique numbers.</p>
+
+<p>$s4=\langle 2, 3, 2 \rangle$ - Has $2$ unique numbers.</p>
+
+<p>In these subarrays, there are $2, 3, 3, 2$ unique numbers, respectively. The maximum amount of unique numbers among all possible contiguous subarrays is $3$.</p></div></body></html>

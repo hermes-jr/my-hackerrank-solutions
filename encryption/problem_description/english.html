@@ -1,0 +1,61 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>An English text needs to be encrypted using the following encryption scheme. <br>
+First, the spaces are removed from the text. Let $L$ be the length of this text. <br>
+Then, characters are written into a grid, whose rows and columns have the following constraints:</p>
+
+<ul>
+<li>$\lfloor\sqrt{L}\rfloor \le rows \le column \le \lceil\sqrt{L}\rceil$, where $\lfloor x \rfloor$ is floor function and $\lceil x \rceil$ is ceil function  </li>
+</ul>
+
+<p>For example, the sentence <code>if man was meant to stay on the ground god would have given us roots</code> after removing spaces is $54$ characters long, so it is written in the form of a grid with 7 rows and 8 columns. </p>
+
+<pre><code>ifmanwas  
+meanttos          
+tayonthe  
+groundgo  
+dwouldha  
+vegivenu  
+sroots
+</code></pre>
+
+<ul>
+<li>Ensure that $rows \times columns \ge L$   </li>
+<li>If multiple grids satisfy the above conditions, choose the one with the minimum area, i.e. $rows \times columns$.  </li>
+</ul>
+
+<p>The encoded message is obtained by displaying the characters in a column, inserting a space, and then displaying the next column and inserting a space, and so on. For example, the encoded message for the above rectangle is:  </p>
+
+<p><code>imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn sseoau</code>  </p>
+
+<p>You will be given a message in English with no spaces between the words. The maximum message length can be $81$ characters. Print the encoded message.</p>
+
+<p>Here are some more examples:  </p>
+
+<p><strong>Sample Input:</strong></p>
+
+<pre><code>haveaniceday
+</code></pre>
+
+<p><strong>Sample Output:</strong></p>
+
+<pre><code>hae and via ecy
+</code></pre>
+
+<p><strong>Sample Input:</strong></p>
+
+<pre><code>feedthedog    
+</code></pre>
+
+<p><strong>Sample Output:</strong></p>
+
+<pre><code>fto ehg ee dd
+</code></pre>
+
+<p><strong>Sample Input:</strong></p>
+
+<pre><code>chillout
+</code></pre>
+
+<p><strong>Sample Output:</strong></p>
+
+<pre><code>clu hlt io
+</code></pre></div></body></html>

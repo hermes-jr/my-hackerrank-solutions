@@ -1,0 +1,41 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>Taum is planning to celebrate the birthday of his friend, Diksha. There are two types of gifts that Diksha wants from Taum: one is black and the other is white. To make her happy, Taum has to buy $B$ number of black gifts and $W$ number of white gifts. </p>
+
+<ul>
+<li>The cost  of each black gift is $X$ units.  </li>
+<li>The cost of every white gift is $Y$ units.  </li>
+<li>The cost of converting each black gift into white gift or vice versa is $Z$ units.  </li>
+</ul>
+
+<p>Help Taum by deducing the minimum amount he needs to spend on Diksha's gifts.</p></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>The first line will contain an integer $T$ which will be the number of test cases.<br>
+There will be $T$ pairs of lines. The first line of each test case will contain the values of integers $B$ and $W$. Another line of each test case will contain the values of integers $X$, $Y$, and $Z$.</p>
+
+<p><strong>Constraints</strong> <br>
+$1 \le T \le 10$ <br>
+$0 \le X,Y,Z,B,W \le 10^9$</p></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>$T$ lines, each containing an integer: the minimum amount of units Taum needs to spend on gifts.</p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code>5
+10 10
+1 1 1
+5 9
+2 3 4
+3 6
+9 1 1
+7 7
+4 2 1
+3 3
+1 9 2
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>20
+37
+12
+35
+12
+</code></pre></div><div class='msB'><p><strong>Explanation</strong></p></div><div class='msB'><ul>
+<li><p><em>Sample Case #01:</em> <br>
+There is no benefit to converting the white gifts into black or the black gifts into white, so Taum will have to buy each gift for <em>1</em> unit.  So cost of buying all gifts will be: $10*1 + 10*1 = 20$.  </p></li>
+<li><p><em>Sample Case #02:</em> <br>
+Again, we can't decrease the cost of black or white gifts by converting colors. We will buy gifts at their original price. So cost of buying all gifts will be: $5*2 + 9*3 = 10+27 = 37$. </p></li>
+<li><p><em>Sample Case #03:</em> <br>
+We will buy white gifts at their original price, $1$. For black gifts, we will first buy white one and color them to black, so that their cost will be reduced to $1+1=2$.  So cost of buying all gifts will be: $3*2 + 6*1 = 12$.</p></li>
+<li><p><em>Sample Case #04:</em> <br>
+Similarly, we will buy white gifts at their original price, $2$. For black gifts, we will first buy white one and color them to black, so that their cost will be reduced to $2+1=3$. So cost of buying all gifts will be: $7*3 + 7*2 = 35$.</p></li>
+<li><p><em>Sample Case #05:</em> 
+We will buy black gifts at their original price, $1$. For white gifts, we will first black gifts worth $1$ unit and color them to white with another $2$ units, so cost for white gifts is reduced to $3$ units. So cost of buying all gifts will be: $3*1 + 3*3 = 3+9 = 12$.</p></li>
+</ul></div></body></html>

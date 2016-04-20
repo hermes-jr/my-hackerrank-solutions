@@ -1,0 +1,72 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>In the previous challenge, you wrote code to perform an <em>Insertion Sort</em> on an unsorted array. But how would you prove that the code is correct? I.e. how do you show that for any input your code will provide the right output?</p>
+
+<p><strong>Loop Invariant</strong> <br>
+In computer science, you could prove it formally with a <em>loop invariant</em>, where you state that a desired property is maintained in your loop. Such a proof is broken down into the following parts:</p>
+
+<ul>
+<li><em>Initialization</em>: It is true (in a limited sense) before the loop runs.</li>
+<li><em>Maintenance</em>: If it's true before an iteration of a loop, it remains true before the next iteration.</li>
+<li><em>Termination</em>: It will terminate in a useful way once it is finished. </li>
+</ul>
+
+<p><strong>Insertion Sort's Invariant</strong> <br>
+Say, you have some InsertionSort code, where the outer loop goes through the whole array $A$:</p>
+
+<pre><code>for(int i = 1; i &lt; A.length; i++){
+//insertion sort code
+</code></pre>
+
+<p>You could then state the following loop invariant:</p>
+
+<blockquote>
+  <p>At the start of every iteration of the outer loop (indexed with $i$), the subarray until $ar[i]$ consists of the original elements that were there, but in sorted order. </p>
+</blockquote>
+
+<p>To prove Insertion Sort is correct, you will then demonstrate it for the three stages:</p>
+
+<ul>
+<li><p><em>Initialization</em> - The subarray starts with the first element of the array, and it is (obviously) sorted to begin with.</p></li>
+<li><p><em>Maintenance</em> - Each iteration of the loop expands the subarray, but keeps the sorted property. An element $V$  gets inserted into the array only when it is greater than the element to its left. Since the elements to its left have already been sorted, it means $V$ is greater than all the elements to its left, so the array remains sorted. (In <em>Insertion Sort 2</em> we saw this by printing the array each time an element was properly inserted.)  </p></li>
+<li><p><em>Termination</em> - The code will terminate after $i$ has reached the last element in the array, which means the sorted subarray has expanded to encompass the entire array. The array is now fully sorted.</p></li>
+</ul>
+
+<p><img src="https://s3.amazonaws.com/hr-challenge-images/insertion-sort/InsertionSortCorrect-small.png" alt="Loop Invariant Chart" title="" /></p>
+
+<p>You can often use a similar process to demonstrate the correctness of many algorithms. You can see <a href="http://www.cs.uofs.edu/~mccloske/courses/cmps144/invariants_lec.html">these notes</a> for more information.</p>
+
+<p><strong>Challenge</strong></p>
+
+<p>In the InsertionSort code below, there is an error. Can you fix it? Print the array only once, when it is fully sorted. </p>
+
+<p><strong>Details</strong> <br>
+The Input format and the constraints are the same as in the previous challenges and are presented below.</p>
+
+<hr>
+
+<p><strong>Input Format</strong> <br>
+There will be two lines of input:</p>
+
+<ul>
+<li>$s$ - the size of the array</li>
+<li>$ar$ - the list of numbers that makes up the array</li>
+</ul>
+
+<p><strong>Output Format</strong> <br>
+Output the numbers in order, space-separated.</p>
+
+<p><strong>Constraints</strong> <br>
+$1 \le s \le 1000$ <br>
+$-1500 \le V \le 1500, V ∈ ar$</p>
+
+<p><strong>Sample Input</strong></p>
+
+<pre>
+6
+1 4 3 5 6 2
+</pre>
+
+<p><strong>Sample Output</strong></p>
+
+<pre>
+1 2 3 4 5 6 
+</pre></div></body></html>

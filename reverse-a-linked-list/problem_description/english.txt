@@ -1,0 +1,29 @@
+<sub>This challenge is part of a tutorial track by [MyCodeSchool](http://www.youtube.com/mycodeschool) and is accompanied by a video lesson.</sub>
+
+You’re given the pointer to the head node of a linked list. Change the <code>next</code> pointers of the nodes so that their order is reversed. The head pointer given may be null meaning that the initial list is empty.
+
+**Input Format**  
+You have to complete the <code>Node* Reverse(Node* head)</code> method which takes one argument - the head of the linked list. You should NOT read any input from stdin/console.
+
+**Output Format**  
+Change the <code>next</code> pointers of the nodes that their order is reversed and <code>return</code> the head of the reversed linked list. Do NOT print anything to stdout/console.
+
+**Sample Input**
+
+NULL  
+2 --> 3 --> NULL
+
+**Sample Output**
+
+    NULL
+    3 --> 2 --> NULL
+
+**Explanation**  
+1. Empty list remains empty  
+2. List is reversed from 2,3 to 3,2  
+
+**Video lesson**  
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/sYcOK51hl-A?theme=light" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/KYH83T4q6Vs?theme=light" frameborder="0" allowfullscreen></iframe>

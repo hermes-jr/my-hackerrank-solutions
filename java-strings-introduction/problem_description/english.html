@@ -1,0 +1,29 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><blockquote>
+  <p>"A string is traditionally a sequence of characters, either as a literal constant or as some kind of variable." &mdash; <a href="https://en.wikipedia.org/wiki/String_%28computer_science%29">Wikipedia: String (computer science)</a></p>
+</blockquote>
+
+<p>This exercise is to test your understanding of Java Strings. A sample <em>String</em> declaration:</p>
+
+<pre><code>String myString = "Hello World!"
+</code></pre>
+
+<p>The elements of a <em>String</em> are called <em>characters</em>. The number of <em>characters</em> in a <em>String</em> is called the <em>length</em>, and it can be retrieved with the <em>String.length()</em> method.</p>
+
+<p>Given two strings of lowercase English letters, $A$ and $B$, perform the following operations:</p>
+
+<ol>
+<li>Sum the lengths of $A$ and $B$.</li>
+<li>Determine if $A$ is lexicographically larger than $B$ (i.e.: does $B$ come before $A$ in the dictionary?).</li>
+<li>Capitalize the first letter in $A$ and $B$ and print them on a single line, separated by a space.</li>
+</ol></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>Two strings, the first being $A$ and the second being $B$. They are comprised of lowercase English letters (no symbols or spaces) and may not be on the same line.</p></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>There are three lines of output: <br>
+For the first line, sum the lengths of $A$ and $B$. <br>
+For the second line, write <strong>Yes</strong> if $A$ is lexicographically larger than $B$ or <strong>No</strong> if it is not. <br>
+For the third line, capitalize the first letter in both $A$ and $B$ and print them on a single line, separated by a space.</p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code> hello
+ java
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>9
+No
+Hello Java
+</code></pre></div><div class='msB'><p><strong>Explanation</strong></p></div><div class='msB'><p>String $A$ is "hello" and $B$ is "java". <br>
+$A$ has a <em>length</em> of $5$, and $B$ has a <em>length</em> of $4$; the sum of their lengths is $9$. <br>
+When sorted alphabetically/lexicographically, "hello" comes before "java"; therefore, $A$ is not larger than $B$ and the answer is <strong>No</strong>. <br>
+When you capitalize the first letter of both $A$ and $B$ and then print them separated by a space, you get "Hello Java".</p></div></body></html>

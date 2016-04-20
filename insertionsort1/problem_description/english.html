@@ -1,0 +1,61 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p><strong>Sorting</strong> <br>
+One common task for computers is to sort data. For example, people might want to see all their files on a computer sorted by size. Since sorting is a simple problem with many different possible solutions, it is often used to introduce the study of algorithms. </p>
+
+<p><strong>Insertion Sort</strong> <br>
+These challenges will cover <em>Insertion Sort</em>, a simple and intuitive sorting algorithm. We will first start with an already sorted list.</p>
+
+<p><strong>Insert element into sorted list</strong> <br>
+Given a sorted list with an unsorted number $e$ in the rightmost cell, can you write some simple code to <em>insert</em> $e$ into the array so that it remains sorted?  </p>
+
+<p>Print the array every time a value is shifted in the array until the array is fully sorted. The goal of this challenge is to follow the correct order of insertion sort. </p>
+
+<p><em>Guideline:</em> You can copy the value of $e$ to a variable and consider its cell "empty". Since this leaves an extra cell empty on the right, you can shift everything over until $V$ can be inserted. This will create a duplicate of each value, but when you reach the right spot, you can replace it with $e$.  </p>
+
+<p><strong>Input Format</strong> <br>
+There will be two lines of input:</p>
+
+<ul>
+<li>$Size$ - the size of the array</li>
+<li>$Arr$ - the unsorted array of integers</li>
+</ul>
+
+<p><strong>Output Format</strong> <br>
+On each line, output the entire array every time an item is shifted in it. </p>
+
+<p><strong>Constraints</strong> <br>
+$1 \le Size  \le 1000$ <br>
+$-10000 \le e \le 10000, e ∈ Arr$  </p>
+
+<p><strong>Sample Input</strong>  </p>
+
+<pre><code>5
+2 4 6 8 3
+</code></pre>
+
+<p><strong>Sample Output</strong></p>
+
+<pre><code>2 4 6 8 8 
+2 4 6 6 8 
+2 4 4 6 8 
+2 3 4 6 8 
+</code></pre>
+
+<p><strong>Explanation</strong></p>
+
+<p>$3$ is removed from the end of the array.<br/>
+In the $1$<sup>st</sup> line $8 &gt; 3$, so $8$ is shifted one cell to the right. <br/>
+In the $2$<sup>nd</sup> line $6 &gt; 3$, so $6$ is shifted one cell to the right. <br/>
+In the $3$<sup>rd</sup> line $4 &gt; 3$, so $4$ is shifted one cell to the right. <br/>
+In the $4$<sup>th</sup> line $2 &lt; 3$, so $3$ is placed at position $2$.  </p>
+
+<p><strong>Task</strong>  </p>
+
+<p>Complete the method <i>insertionSort</i> which takes in one parameter:</p>
+
+<ul>
+<li>$Arr$ - an array with the value $e$ in the right-most cell.  </li>
+</ul>
+
+<p><strong>Next Challenge</strong></p>
+
+<p>In the <a href="https://www.hackerrank.com/challenges/insertionsort2">next Challenge</a>, we will complete the insertion sort itself!</p></div></body></html>

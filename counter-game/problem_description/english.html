@@ -1,0 +1,49 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>Louise and Richard play a game. They have a counter set to <em>N</em>. Louise gets the first turn and the turns alternate thereafter.
+In the game, they perform the following operations.</p>
+
+<ul>
+<li>If <em>N</em> is not a power of 2, reduce the counter by the largest power of 2 less than <em>N</em>.</li>
+<li>If <em>N</em> is a power of 2, reduce the counter by half of <em>N</em>.</li>
+<li>The resultant value is the new <em>N</em> which is again used for subsequent operations.</li>
+</ul>
+
+<p>The game ends when the counter reduces to 1, i.e., <em>N</em> == 1, and the last person to make a valid move wins.</p>
+
+<p>Given <em>N</em>, your task is to find the winner of the game.</p>
+
+<p><strong>Update</strong> If they set counter to 1, Richard wins, because its Louise' turn and she cannot make a move.</p>
+
+<p><strong>Input Format</strong> <br>
+The first line contains an integer <em>T</em>, the number of testcases. <br>
+<em>T</em> lines follow. Each line contains <em>N</em>, the initial number set in the counter.  </p>
+
+<p><strong>Constraints</strong>  </p>
+
+<p>1 &le; <em>T</em> &le; 10 <br>
+1 &le; <em>N</em> &le; 2<sup>64</sup> - 1  </p>
+
+<p><strong>Note:</strong> Range of N is larger than <code>long long int</code>, consider using <code>unsigned long long int</code>.   </p>
+
+<p><strong>Output Format</strong>  </p>
+
+<p>For each test case, print the winner's name in a new line. So if Louise wins the game,  print "Louise". Otherwise, print "Richard". (Quotes are for clarity)</p>
+
+<p><strong>Sample Input</strong></p>
+
+<pre><code>1
+6
+</code></pre>
+
+<p><strong>Sample Output</strong></p>
+
+<pre><code>Richard
+</code></pre>
+
+<p><strong>Explanation</strong></p>
+
+<ul>
+<li>As 6 is not a power of 2, Louise reduces the largest power of 2 less than 6 i.e., 4, and hence the counter reduces to 2.</li>
+<li>As 2 is a power of 2, Richard reduces the counter by half of 2 i.e., 1. Hence the counter reduces to 1.</li>
+</ul>
+
+<p>As we reach the terminating condition with <em>N</em> == 1, Richard wins the game.</p></div></body></html>

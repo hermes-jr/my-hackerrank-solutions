@@ -1,0 +1,36 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>A Java abstract class is a class that can't be instantiated, that means you cannot create new instances of an abstract class. It works as a base for subclasses. You should learn about Java Inheritence before attempting this challenge. </p>
+
+<p>Following is an example of abstract class:</p>
+
+<pre><code>abstract class Book
+{
+    String title;
+    abstract void setTitle(String s);
+    String getTitle()
+    {
+        return title;
+    }
+
+}
+</code></pre>
+
+<p>If you try to create an instance of this class like the following line you will get an error:</p>
+
+<pre><code>Book new_novel=new Book(); 
+</code></pre>
+
+<p>You have to create another class that extends the abstract class. Then you can create instance of the new class. </p>
+
+<p>Notice that <em>setTitle</em> method is abstract too and has no body. That means you must implement the body of the that method in the child class.</p>
+
+<p>In the editor we have provided the abstract <em>Book</em> class and a <em>Main</em> class. In the Main class we created instance of a class called <em>MyBook</em>. Your task is to write just the <em>MyBook</em> class. Your class mustn't be public.</p>
+
+<p><strong>Sample Input</strong></p>
+
+<pre><code>A tale of two cities
+</code></pre>
+
+<p><strong>Sample Output</strong></p>
+
+<pre><code>The title is: A tale of two cities
+</code></pre></div></body></html>

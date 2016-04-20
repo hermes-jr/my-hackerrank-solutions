@@ -1,0 +1,15 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>You are given a square map of size $n \times n$. Each cell of the map has a value denoting its depth. We will call a cell of the map a <em>cavity</em> if and only if this cell is not on the border of the map and each cell adjacent to it has <em>strictly smaller depth</em>. Two cells are adjacent if they have a common side (edge).</p>
+
+<p>You need to find all the cavities on the map and depict them with the uppercase character <strong>X</strong>.  </p></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>The first line contains an integer, $n$, denoting the size of the map. Each of the following $n$ lines contains $n$ positive digits without spaces. Each digit (1-9) denotes the depth of the appropriate area.</p>
+
+<p><strong>Constraints</strong> <br>
+$1 \le n \le 100$</p></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>Output $n$ lines, denoting the resulting map. Each cavity should be replaced with character <code>X</code>.</p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code>4
+1112
+1912
+1892
+1234
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>1112
+1X12
+18X2
+1234
+</code></pre></div><div class='msB'><p><strong>Explanation</strong></p></div><div class='msB'><p>The two cells with the depth of 9 fulfill all the conditions of the Cavity definition and have been replaced by X. </p></div></body></html>

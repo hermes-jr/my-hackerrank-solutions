@@ -1,0 +1,34 @@
+You are given two strings $A$ and $B$. Detect, whether there is a string that appears in the both $A$ and $B$.
+
+**Input format:**
+
+Several test cases will be given to you in a single file. The first line of the input will contain a single integer $T$ - the number of the test cases.
+
+Then there will be $T$ descriptions of the test cases.
+Each description consists of two lines. The first line contains the string $A$, the second line contains the string $B$.
+
+**Output format:**
+
+For each test case, output "YES", if there is a common substring and "NO" if there isn't any common substring of two strings.
+
+**Example input:**
+
+<pre>
+2
+hello
+world
+hi
+world
+</pre>
+
+**Example output:**
+
+<pre>YES
+NO
+</pre>
+
+**Constraints:**
+
+All the strings contains only lowercase latin letters.<br>
+$1 <= T <= 10$<br>
+$1 <= |A|, |B| <= 10^5$

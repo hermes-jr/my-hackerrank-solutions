@@ -1,0 +1,35 @@
+import numpy as np
+
+data = list()
+
+cases = int(input())
+for i in range(cases):
+    data.append(int(input())) 
+
+daycoeff = [0] * 7
+dayhits = [0] * 7
+
+for i in range(1, cases):
+    delta = (data[i] - data[i - 1]) * 100 / data[i - 1]
+    if abs(delta) < 40:
+        daycoeff [i % 7] += delta
+        dayhits [i % 7] += 1
+
+for i in range(0,7):
+    daycoeff[i] /= dayhits[i]
+
+daycoeff[0] *= 0.5;
+daycoeff[1] *= 0.6;
+daycoeff[2] *= 0.7;
+daycoeff[3] *= 0.3;
+daycoeff[4] *= 0.7;
+daycoeff[5] *= 0.9;
+daycoeff[6] *= 1.0;
+
+for i in range(cases,cases + 30):
+    data.append(0)
+    data[i] =data[i - 1] * (100 + daycoeff[i % 7]) / 100
+    if i == cases:
+        print(round(data[i] - 450))
+    else:
+        print(round(data[i]))

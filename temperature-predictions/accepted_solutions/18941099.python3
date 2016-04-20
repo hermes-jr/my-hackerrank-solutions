@@ -1,0 +1,45 @@
+import math
+from sklearn import ensemble
+
+
+def func(x, a, b, c):
+    return a * math.sin(b * x + c) + 10
+
+m = {"January": 0, "February": 1, "March": 2, "April": 3, "May": 4, "June": 5, "July": 6,
+   "August": 7, "September": 8, "October": 9, "November": 10, "December": 11}
+
+cases = int(input())
+input()
+mindata = list()
+maxdata = list()
+data = list()
+missing = list()
+
+for i in range(cases):
+    line = input().strip().split()
+    year = int(line[0])
+    month = line[1]
+    tmax = line[2]
+    tmin = line[3]
+    
+    maxdata.append(float(tmax) if not tmax.startswith("Missing_") else None)
+    mindata.append(float(tmin) if not tmin.startswith("Missing_") else None)
+    
+    if tmax.startswith("Missing_") or tmin.startswith("Missing_"):
+        missing.append([year, m[month]])
+    else:
+        data.append([year, m[month]])
+        
+func = ([(x + y) / 2 for x, y in zip(maxdata, mindata) if x is not None and y is not None])
+
+model = ensemble.GradientBoostingRegressor().fit(data, func)
+
+result = list(model.predict(missing))
+
+for i in range(cases):
+    if maxdata[i] == None:
+        answer = 2 * result.pop(0) - mindata[i]
+        print(round(answer, 1))
+    if mindata[i] == None:
+        answer = 2 * result.pop(0) - maxdata[i]
+        print(round(answer, 1))

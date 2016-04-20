@@ -1,0 +1,62 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p><strong>Objective</strong> <br>
+In this challenge, we practice using multiple linear regression to predict housing prices. Check out the <a href="/contests/intro-to-statistics/challenges/predicting-house-prices/resources">Resources</a> tab for helpful videos!</p>
+
+<p><strong>Task</strong>  <br>
+Charlie wants to buy a house. He does a detailed survey of the area where he wants to live, in which he quantifies, normalizes, and maps the desirable features of houses to values on a scale of $0$ to $1$ so the data can be assembled into a table. If Charlie noted $F$ features, each row contains $F$ space-separated values followed by the <em>house price in dollars per square foot</em> (making for a total of $F+1$ columns). If Charlie makes observations about $H$ houses, his observation table has $H$ rows. This means that the table has a total of $(F+1) \times H$ entries. </p>
+
+<p>Unfortunately, he was only able to get the price per square foot for certain houses and thus needs your help estimating the prices of the rest! Given the feature and pricing data for a set of houses, help Charlie estimate the price per square foot of the houses for which he has compiled feature data but no pricing.</p>
+
+<p><em>Important Observation</em>: The prices per square foot form an approximately linear function for the features quantified in Charlie's table. For the purposes of prediction, you need to figure out this linear function.</p>
+
+<p><em>Recommended Technique</em>: Use a regression-based technique. At this point, you are not expected to account for bias and variance trade-offs.</p></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>The first line contains $2$ space-separated integers, $F$ (the number of observed features) and $N$ (the number of rows/houses for which Charlie has noted <em>both</em> the features and price per square foot). <br>
+The $N$ subsequent lines each contain $F+1$ space-separated integers describing a row in the table; the first $F$ elements are the noted features for a house, and the very last element is its price per square foot.  </p>
+
+<p>The next line (following the table) contains a single integer, $T$, denoting the number of houses for for which Charlie noted features but <em>does not</em> know the price per square foot. <br>
+The $T$ subsequent lines each contain $F$ space-separated integers describing the features of a house for which pricing is not known.</p></div><div class='msB'><p><strong>Constraints</strong></p></div><div class='msB'><ul>
+<li>$1 \le F \le 10$  </li>
+<li>$5 \le N \le 100$ </li>
+<li>$1 \le T \le 100$  </li>
+<li>$0 \le \text{ Price Per Square Foot }\le 10^6$  </li>
+<li>$0 \le \text{ Factor Values } \le 1$  </li>
+</ul>
+
+<p><strong>Scoring</strong>  </p>
+
+<p>For each test case, we will compute the following:</p>
+
+<ul>
+<li>$d = \text{Normalized Distance from Expected answer} = \frac{abs( Computed-Expected)}{Expected  }$</li>
+</ul>
+
+<p>There are multiple ways to approach this problem that account for bias, variance, various subjective factors, and "noise". We take a realistic approach to scoring and permit up to a $\pm 10\%$ swing of our expected answer.   </p>
+
+<ul>
+<li>$d_{adjusted} = max(d - 0.1, 0)$  </li>
+<li>$\text{Score for each test case} \equiv \textit{max(}1-d_{adjusted},0)$</li>
+<li>$\text{Score for the test case} \equiv \text{(Average score for all the tests it contains)} \times M$, where $M$ is the maximum possible score for the test case.    </li>
+</ul>
+
+<p>Consider a test case in which we only need to find the pricing for $1$ house. Suppose our expected answer is $10$, and your answer is $9.5$:  </p>
+
+<p>$d = \frac{(10 - 9.5)}{10} = 0.05$ <br>
+$d_{adjusted} = max(0.05 - 0.1,0) = 0$ </p>
+
+<p>The score for a test case with $10$ points $= max(1,0) \times 10
+= 10$</p></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>Print $T$ lines, where each line $i$ contains the predicted price for the $i^{th}$ house (from the second table of houses with unknown prices per square foot).  </p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code>2 7
+0.18 0.89 109.85
+1.0 0.26 155.72
+0.92 0.11 137.66
+0.07 0.37 76.17
+0.85 0.16 139.75
+0.99 0.41 162.6
+0.87 0.47 151.77
+4
+0.49 0.18
+0.57 0.83
+0.56 0.64
+0.76 0.18
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>105.22
+142.68
+132.94
+129.71
+</code></pre></div></body></html>

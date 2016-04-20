@@ -1,0 +1,44 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>Numeros, the Artist, had two lists $A$ and $B$, such that $B$ was a permutation of $A$. Numeros was very proud of these lists. Unfortunately, while transporting them from one exhibition to another, some numbers were left out of $A$. Can you find the missing numbers?</p>
+
+<p><strong>Notes</strong>  </p>
+
+<ul>
+<li>If a number occurs multiple times in the lists, you must ensure that the frequency of that number in both lists is the same. If that is not the case, then it is also a missing number. </li>
+<li>You have to print all the missing numbers in ascending order. </li>
+<li>Print each missing number once, even if it is missing multiple times. </li>
+<li>The difference between maximum and minimum number in $B$ is less than or equal to $100$.  </li>
+</ul>
+
+<p><strong>Input Format</strong> <br>
+There will be four lines of input:</p>
+
+<p>$n$ - the size of the first list <br>
+ This is followed by $n$ space-separated integers that make up the first list. <br>
+ $m$ - the size of the second list <br>
+ This is followed by $m$ space-separated integers that make up the second list.  </p>
+
+<p><strong>Output Format</strong> <br>
+Output the missing numbers in ascending order.</p>
+
+<p><strong>Constraints</strong> <br>
+$1 \le n, m \le 1000010$ <br>
+$1 \le x \le 10000, x ∈ B$ <br>
+$Xmax - Xmin \lt 101$</p>
+
+<p><strong>Sample Input</strong></p>
+
+<pre>
+10
+203 204 205 206 207 208 203 204 205 206
+13
+203 204 204 205 206 207 205 208 203 206 205 206 204
+</pre>
+
+<p><strong>Sample Output</strong></p>
+
+<pre>
+204 205 206
+</pre>
+
+<p><strong>Explanation</strong> <br>
+204 is present in both arrays. Its frequency in <em>A</em> is 2, while its frequency in <em>B</em> is 3. Similarly, 205 and 206 occur twice in <em>A</em>, but thrice in <em>B</em>. So, these three numbers are our output. The rest of the numbers have thesame frequency in both lists.</p></div></body></html>

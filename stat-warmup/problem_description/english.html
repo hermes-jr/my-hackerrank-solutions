@@ -1,0 +1,73 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>You are given an array of N integers separated by spaces, all in one line. </p>
+
+<p>Display the following:  </p>
+
+<ol>
+<li><p><strong>Mean (m)</strong>: The average of all the integers.</p></li>
+<li><p><strong>Median of this array</strong>: In case, the number of integers is odd, the middle element; else, the average of the middle two elements.</p></li>
+<li><p><strong>Mode</strong>: The element(s) which occurs most frequently. If multiple elements satisfy this criteria, display the numerically smallest one.</p></li>
+<li><p><strong>Standard Deviation (SD)</strong>.</p>
+
+<p>SD = (((x<sub>1</sub>-m)<sup>2</sup>+(x<sub>2</sub>-m)<sup>2</sup>+(x<sub>3</sub>-m)<sup>2</sup>+(x<sub>4</sub>-m)<sup>2</sup>+...(x<sub>N</sub>-m)<sup>2</sup>))/N)<sup>0.5</sup>  </p>
+
+<p>where x<sub>i</sub> is the i<sup>th</sup> element of the array  </p></li>
+<li><p>Lower and Upper Boundary of the 95% <strong>Confidence Interval for the mean</strong>, separated by a space. This might be a new term to some. However, it is an important concept with a simple, formulaic solution. Look it up!</p></li>
+</ol>
+
+<p>Other than the modal values (which should all be integers) the answers should be in decimal form till one place of decimal (0.0 format). An error margin of +/- 0.1 will be tolerated for the standard deviation and the confidence interval boundaries. The mean, mode and median values should match the expected answers exactly.</p>
+
+<p>Assume that these numbers were sampled from a normal distribution; the sample is a reasonable representation of the distribution; a user can approximate that the population standard deviation =~ standard deviation computed for the given points- with the understanding that assumptions of normality are convenient approximations. Some relevant Youtube videos:</p>
+
+<p><strong>Mean, Median and Mode</strong>  </p>
+
+<p><div class="hackdown-video" style="height:316px;"><iframe sandbox="allow-scripts allow-same-origin" src="//www.youtube.com/embed/5C9LBF3b65s" width="560" height="315" frameborder="0" allowfullscreen> </iframe></div>  </p>
+
+<p><strong>Standard Deviation</strong>  </p>
+
+<p><div class="hackdown-video" style="height:316px;"><iframe sandbox="allow-scripts allow-same-origin" src="//www.youtube.com/embed/dq_D30kyR1A" width="560" height="315" frameborder="0" allowfullscreen> </iframe></div>  </p>
+
+<p><strong>Confidence Intervals: Getting a bit more serious!</strong> <br>
+<div class="hackdown-video" style="height:316px;"><iframe sandbox="allow-scripts allow-same-origin" src="//www.youtube.com/embed/tFWsuO9f74o" width="560" height="315" frameborder="0" allowfullscreen> </iframe></div>  </p>
+
+<p><strong>Input Format</strong>  </p>
+
+<p>The first line contains the number of integers. <br>
+The second line contains space separated integers for which you need to find the mean, median, mode, standard   deviation and confidence interval boundaries.</p>
+
+<p><strong>Constraints</strong></p>
+
+<p>10 &lt;= N &lt;= 2500 <br>
+0 &lt; x<sub>i</sub>  &lt;= 10<sup>5</sup></p>
+
+<p><strong>Output Format</strong></p>
+
+<p>A total of five lines are required.</p>
+
+<pre><code>Mean (format:0.0) on the first line
+Median (format: 0.0) on the second line
+Mode(s) (Numerically smallest Integer in case of multiple integers)
+Standard Deviation (format:0.0) 
+Lower and Upper Boundary of Confidence Interval (format: 0.0) with a space between them.
+</code></pre>
+
+<p><strong>Sample Input</strong></p>
+
+<pre><code>10
+64630 11735 14216 99233 14470 4978 73429 38120 51135 67060
+</code></pre>
+
+<p><strong>Sample Output</strong></p>
+
+<pre><code>43900.6
+44627.5
+4978
+30466.9
+25017.0 62784.2
+</code></pre>
+
+<p><strong>Note</strong> <br>
+Use the constant 1.96 while computing the confidence interval.  </p>
+
+<p><strong>Scoring</strong></p>
+
+<p>Scoring is proportional to the number of test cases cleared.</p></div></body></html>

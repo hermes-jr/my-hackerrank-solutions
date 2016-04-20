@@ -1,0 +1,32 @@
+**Problem Statement**  
+You are given a number _N_, you need to print the number of positions where digits exactly divides _N_.  
+
+**Input format**
+
+The first line contains T (number of test cases) followed by T lines (each containing N).  
+
+**Constraints**  
+1 <=T <= 15  
+0 < N < 10<sup>10</sup>
+
+**Output Format**  
+For each test case print the number of positions in _N_ where digits in that number exactly divides the number _N_ in separate line. 
+
+**Note**
+
+Same digits repeated twice, should be counted twice.  
+
+**Input**  
+
+    1  
+    12
+
+**Output**  
+    
+    2
+
+**Explanation**  
+2 digits in the number 12 divide the number exactly. Digits at ten's place, _1_, divides 12 exactly in 12 parts, and digit at one's place, _2_ divides 12 equally in 6 parts.
+
+    
+This challenge was a part of [Pragyan 12](http://www.pragyan.org/12/home/)

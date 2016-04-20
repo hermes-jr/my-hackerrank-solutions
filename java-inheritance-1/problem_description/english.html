@@ -1,0 +1,49 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>Using Inheritance one class can acquire the properties of others. Consider the following <em>Animal</em> class:</p>
+
+<pre><code>class Animal{
+    void walk()
+    {
+        System.out.println("I am walking");
+    }
+}
+</code></pre>
+
+<p>This class has only one method <em>walk</em>. Now we want to create a <em>Bird</em> class that also has <em>fly</em> method. We can do it using <em>extends</em> keyword.</p>
+
+<pre><code>class Bird extends Animal
+{
+    void fly()
+    {
+        System.out.println("I am flying");
+    }
+}
+</code></pre>
+
+<p>Now we can create a Bird object that can both fly and walk.</p>
+
+<pre><code>public class Solution
+{
+   public static void main(String args[])
+   {
+
+      Bird bird = new Bird();
+      bird.walk();
+      bird.fly();
+   }
+}
+</code></pre>
+
+<p>This code will print:</p>
+
+<pre><code>I am walking
+I am flying
+</code></pre>
+
+<p>So Bird has all the properties that an animal have and it also have some unique properties. </p>
+
+<p>Your task is very simple. We provided the code above in the editor. Just add a <em>sing</em> method in the <em>Bird</em> class and modify main function accordingly so that it prints the following lines:</p>
+
+<pre><code>I am walking
+I am flying
+I am singing
+</code></pre></div></body></html>

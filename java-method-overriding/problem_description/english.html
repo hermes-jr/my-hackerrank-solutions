@@ -1,0 +1,36 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>When a subclass inherits from a superclass, it also inherits its methods; however, it can also <em>override</em> the superclass methods (as well as declare and implement new ones). Consider the following <em>Sports</em> class:</p>
+
+<div class="highlight"><pre><span class="kd">class</span> <span class="nc">Sports</span><span class="o">{</span>
+    <span class="n">String</span> <span class="nf">getName</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="s">&quot;Generic Sports&quot;</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kt">void</span> <span class="nf">getNumberOfTeamMembers</span><span class="o">(){</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="s">&quot;Each team has n players in &quot;</span> <span class="o">+</span> <span class="n">getName</span><span class="o">()</span> <span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<p>Next, we create a <em>Soccer</em> class that inherits from the <em>Sports</em> class. We can override the <em>getName</em> method and return a different, subclass-specific string:</p>
+
+<div class="highlight"><pre><span class="kd">class</span> <span class="nc">Soccer</span> <span class="kd">extends</span> <span class="n">Sports</span><span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="n">String</span> <span class="nf">getName</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="s">&quot;Soccer Class&quot;</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<p><strong>Note:</strong> When overriding a method, you should precede it with the <code>@Override</code> annotation. The parameter(s) and return type of an overridden method must be exactly the same as those of the method inherited from the supertype. </p>
+
+<hr />
+
+<p><strong>Task</strong> <br>
+Complete the code in your editor by writing an overridden <em>getNumberOfTeamMembers</em> method that prints the same statement as the superclass' <em>getNumberOfTeamMembers</em> method, except that it replaces $n$ with $11$ (the number of players on a Soccer team). </p></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>When executed, your completed code should print the following:</p>
+
+<pre><code>Generic Sports
+Each team has n players in Generic Sports
+Soccer Class
+Each team has 11 players in Soccer Class
+</code></pre></div></body></html>

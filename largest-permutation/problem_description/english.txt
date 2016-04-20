@@ -1,0 +1,24 @@
+You are given an array of __n__ integers which is a permuation of the first __n__ natural numbers. You can swap any two elements of the array. You can make at most __k__ swaps. What is the lexicographically worst permutation you can make? <br> 
+
+__Input Format__ <br>
+The first line of the input contains two integers __n__ and __k__, the size of the input array and the maximum swaps you can make, respectively. Second line of the input contains a permutation of the first __n__ natural numbers.
+
+__Output Format__ <br>
+Print the lexicographically worst permutation you can make with at most __k__ swaps.
+
+__Constraints__ <br>
+1 <= n <= 10^5 <br>
+1 <= k <= 10^9 <br>
+
+__Sample Input__ <br>
+<pre>
+5 1
+4 2 3 5 1
+</pre>
+
+__Sample Output__ <br>
+<pre>
+5 2 3 4 1
+</pre>
+
+

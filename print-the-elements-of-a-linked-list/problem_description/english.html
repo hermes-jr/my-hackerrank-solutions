@@ -1,0 +1,19 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>This challenge is part of a <a href="http://www.youtube.com/mycodeschool">MyCodeSchool</a> tutorial track and is accompanied by a <a href="http://www.youtube.com/embed/vcQIFT79_50?theme=light">video lesson</a>.</p>
+
+<hr />
+
+<p>If you're new to <em>linked lists</em>, this is a great exercise for learning about them. Given a pointer to the <em>head</em> node of a linked list, print its elements in order, one element per line. If the head pointer is null (indicating the list is empty), don’t print anything.</p></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>The <code>void Print(Node* head)</code> method takes the head node of a linked list as a parameter. Each struct <em>Node</em> has a <em>data</em> field (which stores integer data) and a <em>next</em> field (which points to the next element in the list). </p>
+
+<p><strong>Note:</strong> Do not read any input from stdin/console. Each test case calls the <em>Print</em> method individually and passes it the head of a list. </p></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>Print the integer data for each element of the linked list to stdout/console (e.g.: using <em>printf</em>, <em>cout</em>, etc.). There should be one element per line.</p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><p>This example uses the following two linked lists:</p>
+
+<pre><code>NULL  
+1-&gt;2-&gt;3-&gt;NULL
+</code></pre>
+
+<p>$NULL$ and $Node \ 1$ are the two head nodes passed as arguments to <code>Print(Node* head)</code>.</p>
+
+<p><strong>Note:</strong> In linked list diagrams, <code>-&gt;</code> describes a pointer to the <em>next</em> node in the list. </p></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>1
+2
+3
+</code></pre></div><div class='msB'><p><strong>Explanation</strong></p></div><div class='msB'><p><em>Test Case 0: <code>NULL</code></em>. An empty list is passed to the method, so nothing is printed. <br>
+<em>Test Case 1: <code>1-&gt;2-&gt;3-&gt;NULL</code></em>. This is a non-empty list so we loop through each element, printing each element's data field on its own line.</p></div></body></html>

@@ -1,0 +1,78 @@
+You are given a record containing the maximum and the minimum monthly temperatures at a particular station. The record shows information for each month from January 1908 to March 2012. However, some of the temperature values have been blanked out. Your task is to estimate the missing values.  
+
+**Input Format**  
+
+The first line contains an integer, N, which denotes the number of rows of data in the input file. 
+The second line contains the header of the tab separated file (this line can be ignored - it has been provided for making the test case more easily comprehendible)  
+This is followed by N rows of data (year, month, maximum temperature and minimum temperature) where the columns are tab separated. In some of the rows, the minimum or the maximum temperature field has been blanked out and replaced by (Missing\_1, Missing\_2 and so on).  
+
+**Input Constraints**  
+
+1 <= N <= 1500  
+1908 <= Year <= 2013  
+The 'month' field will always contain a fully spelled out month (January - December).
+-75 <= Maximum/Minimum Temperature <= 75  
+Data is provided month-wise, in chronological order.  
+For certain months or years, data may be missing.
+
+**Sample Input**  
+    
+    20
+    yyyy	month	tmax	tmin
+    1908	January	5.0	-1.4
+    1908	February	7.3	1.9
+    1908	March	6.2	0.3
+    1908	April	Missing_1	2.1
+    1908	May	Missing_2	7.7
+    1908	June	17.7	8.7
+    1908	July	Missing_3	11.0
+    1908	August	17.5	9.7
+    1908	September	16.3	8.4
+    1908	October	14.6	8.0
+    1908	November	9.6	3.4
+    1908	December	5.8	Missing_4
+    1909	January	5.0	0.1
+    1909	February	5.5	-0.3
+    1909	March	5.6	-0.3
+    1909	April	12.2	3.3
+    1909	May	14.7	4.8
+    1909	June	15.0	7.5
+    1909	July	17.3	10.8
+    1909	August	18.8	10.7  
+    
+    
+**Sample Output**  
+The four missing values (Missing\_1, Missing\_2, Missing\_3, Missing\_4) are:  
+
+    8.6
+    15.8
+    18.9
+    0.0    
+    
+Your task is the predict values as close as possible to these.  
+
+**Test Cases**  
+The above test case is for explanatory purposes only, which is why we included only 20 lines.  
+The sample test case run on hitting "Compile and Test" has 444 rows of data.  
+The hidden test case, which is used at the time of submission, has over 1.2k rows of data. The sample test case rows are a subset of it.  
+
+ **Scoring**  
+
+The score seen on hitting 'Compile and Test' is the score against the sample test case (of 444 rows) only. It is normalized, and will always lie between 0 and 1.  
+The score seen on making the submission is awarded **only on the basis of the hidden test case**.  
+
+*Details of the scoring formula*  
+
+We compute, the average of the magnitude of difference between your pedicted value and the actual recorded value, for each of the missing terms. If this average exceeds 5.0 degrees, you will be assigned a zero score.  
+
+For each of the values predicted by you (p), we will compute an "error". "error" is the difference of the predicted value (p) and the actual temperature at that location. Hence,  
+*error = abs(p - actualTemperatureRecording)*  
+*M = total missing values in the test case*  
+We will compute the **average** of all these error terms, over all the rows of data in the input file, and record it as **Av= (summation of errors for each of the M terms)/M**
+
+Your score for this challenge, will be **(1-Av/5.0) * (Max Score)**
+Where, **Max Score** = Total number of points assigned to this challenge.  
+   
+**Libraries**  
+
+Libraries available in our Machine Learning/Real Data challenges will be enabled for this contest and are listed [here](http://www.hackerrank.com/environment). Please note, that occasionally, a few functions or modules might not work in the constraints of our infrastructure. For instance, some modules try to run multiple threads (and fail). So please try importing the library and functions and cross checking if they work in our online editor in case you plan to develop a solution locally, and then upload to our site.  

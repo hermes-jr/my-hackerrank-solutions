@@ -1,0 +1,34 @@
+<p>A "Hello World" program has been widely adopted as the introductory program for learning programming. So let's start with functional programming by writing the same program.</p>
+
+<br>
+<p><b>Sample Input</b></p>
+<pre>(Nil)</pre>  
+
+
+<br>
+<p><b>Sample Output</b></p>  
+
+<pre>Hello World</pre> 
+
+<br>  
+
+<p><b>Method Signature</b></p>  
+<pre>
+Number Of Parameters: 0
+Parameters: []
+Returns: nil
+Behavior: Prints "Hello World"
+</pre>  
+
+**For Hackers Using Clojure**  
+
+This will be the outline of your function body (fill up the blank portion marked by underscores):  
+
+     (___________________________)
+
+
+**For Hackers Using Scala**  
+This will be the outline of your function body (fill up the blank portion marked by underscores):  
+
+     def f() = ________________
+

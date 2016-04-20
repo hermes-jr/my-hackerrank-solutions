@@ -1,0 +1,58 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p>Manasa is out on a hike with friends. She finds a trail of stones with numbers on them. She starts following the trail and notices that two consecutive stones have a difference of either $a$ or $b$. Legend has it that there is a treasure trove at the end of the trail and if Manasa can guess the value of the last stone, the treasure would be hers. Given that the number on the first stone was $0$, find all the possible values for the number on the last stone. </p>
+
+<p><strong>Note</strong>: The numbers on the stones are in increasing order.</p>
+
+<p><strong>Input Format</strong> <br>
+The first line contains an integer $T$, i.e. the number of test cases. $T$ test cases follow; each has <em>3</em> lines. The first line contains $n$ (the number of stones). The second line contains $a$, and the third line contains $b$. </p>
+
+<p><strong>Output Format</strong> <br>
+Space-separated list of numbers which are the possible values of the last stone in <em>increasing order</em>. </p>
+
+<p><strong>Constraints</strong> <br>
+$1 \le T \le 10$ <br>
+$1 \le n, a, b \le 10^3$  </p>
+
+<p><strong>Sample Input</strong>  </p>
+
+<pre><code>2
+3 
+1
+2
+4
+10
+100
+</code></pre>
+
+<p><strong>Sample Output</strong>  </p>
+
+<pre><code>2 3 4 
+30 120 210 300 
+</code></pre>
+
+<p><strong>Explanation</strong></p>
+
+<p>All possible series for the first test case are given below:</p>
+
+<ol>
+<li>0,1,<strong>2</strong></li>
+<li>0,1,<strong>3</strong></li>
+<li>0,2,<strong>3</strong></li>
+<li>0,2,<strong>4</strong></li>
+</ol>
+
+<p>Hence the answer <code>2 3 4</code>. </p>
+
+<p>Series with different number of final steps for second test case are the following: </p>
+
+<ol>
+<li>0, 10, 20, <strong>30</strong></li>
+<li>0, 10, 20, <strong>120</strong></li>
+<li>0, 10, 110, <strong>120</strong></li>
+<li>0, 10, 110, <strong>210</strong></li>
+<li>0, 100, 110, <strong>120</strong></li>
+<li>0, 100, 110, <strong>210</strong></li>
+<li>0, 100, 200, <strong>210</strong></li>
+<li>0, 100, 200, <strong>300</strong></li>
+</ol>
+
+<p>Hence the answer <code>30 120 210 300</code>.</p></div></body></html>

@@ -1,0 +1,65 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><ul>
+<li>Create a list, $seqList$, of $N$ empty sequences, where each sequence is indexed from $0$ to $N-1$. The elements within each of the $N$ sequences also use $0$-indexing.</li>
+<li>Create an integer, $lastAns$, and initialize it to $0$.</li>
+<li>The $2$ types of queries that can be performed on your list of sequences ($seqList$) are described below:
+<ol><li>Query: $\texttt{1 x y}$
+<ol><li>Find the sequence, $seq$, at index $( \ (x \oplus lastAns) \ \% \ N \ )$ in $seqList$.</li>
+<li>Append integer $y$ to sequence $seq$.</li></ol></li>
+<li>Query: $\texttt{2 x y}$
+<ol><li>Find the sequence, $seq$, at index $( \ (x \oplus lastAns) \ \% \ N \ )$ in $seqList$.</li>
+<li>Find the value of element $y \ \% \ size$ in $seq$ (where $size$ is the size of $seq$) and assign it to $lastAns$.</li>
+<li>Print the new value of $lastAns$ on a new line</li></ol></li></ol></li>
+</ul>
+
+<p><strong>Task</strong> <br>
+Given $N$, $Q$, and $Q$ queries, execute each query.</p>
+
+<p><strong>Note:</strong> $\oplus$ is the <em>bitwise XOR</em> operation, which corresponds to the $^$ operator in most languages. Learn more about it on <a href="https://en.wikipedia.org/wiki/Exclusive_or">Wikipedia</a>. </p></div><div class='msB'><p><strong>Input Format</strong></p></div><div class='msB'><p>The first line contains two space-separated integers, $N$ (the number of sequences) and $Q$ (the number of queries), respectively. <br>
+Each of the $Q$ subsequent lines contains a query in the format defined above.</p></div><div class='msB'><p><strong>Constraints</strong></p></div><div class='msB'><ul>
+<li>$1 \leq  N,Q \leq  10^5$</li>
+<li>$0 \leq x \leq 10^9$</li>
+<li>$0 \leq y \leq 10^9$</li>
+<li>It is guaranteed that query type $2$ will never query an empty sequence or index.</li>
+</ul></div><div class='msB'><p><strong>Output Format</strong></p></div><div class='msB'><p>For each type $2$ query, print the updated value of $lastAns$ on a new line.</p></div><div class='msB'><p><strong>Sample Input</strong></p></div><div class='msB'><pre><code>2 5
+1 0 5
+1 1 7
+1 0 3
+2 1 0
+2 1 1
+</code></pre></div><div class='msB'><p><strong>Sample Output</strong></p></div><div class='msB'><pre><code>7
+3
+</code></pre></div><div class='msB'><p><strong>Explanation</strong></p></div><div class='msB'><p><em>Initial Values:</em> <br>
+$N = 2$ <br>
+$lastAns = 0$ <br>
+$S_0 = \{\}$ <br>
+$S_1 = \{\}$    </p>
+
+<p><em>Query 0:</em> Append $5$ to sequence $( \ (0 \oplus 0) \ \% \ 2 \ ) = 0$. <br>
+$lastAns = 0$ <br>
+$S_0 = \{5\}$ <br>
+$S_1 = \{\}$    </p>
+
+<p><em>Query 1:</em> Append $7$ to sequence $( \ (1 \oplus 0) \ \% \ 2 \ ) = 1$. <br>
+$S_0 = \{5\}$ <br>
+$S_1 = \{7\}$   </p>
+
+<p><em>Query 2:</em> Append $3$ to sequence $( \ (0 \oplus 0) \ \% \ 2 \ ) = 0$. <br>
+$lastAns = 0$ <br>
+$S_0 = \{5, 3\}$ <br>
+$S_1 = \{7\}$   </p>
+
+<p><em>Query 3:</em> Assign the value at index $0$ of sequence $( \ (1 \oplus 0) \ \% \ 2 \ ) = 1$ to $lastAns$, print $lastAns$. 
+$lastans = 7$ <br>
+$S_0 = \{5, 3\}$ <br>
+$S_1 = \{7\}$   </p>
+
+<pre><code>7
+</code></pre>
+
+<p><em>Query 4:</em> Assign the value at index $1$ of sequence $( \ (1 \oplus 7) \ \% \ 2 \ ) = 0$ to $lastAns$, print $lastAns$. 
+$lastans = 3$ <br>
+$S_0 = \{5, 3\}$ <br>
+$S_1 = \{7\}$   </p>
+
+<pre><code>3
+</code></pre></div></body></html>

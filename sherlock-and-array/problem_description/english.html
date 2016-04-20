@@ -1,0 +1,35 @@
+<html></body><div class='msB'><p><strong></strong></p></div><div class='msB'><p><a href="https://hr-filepicker.s3.amazonaws.com/101may14/russian/2490-sherlock-and-array.pdf">Русский</a> \| 
+<a href="https://hr-filepicker.s3.amazonaws.com/101may14/chinese/2490-sherlock-and-array.pdf">中文</a><br/>
+Watson gives Sherlock an array $A$ of length $N$. Then he asks him to determine if there exists an element in the array such that the sum of the elements on its left is equal to the sum of the elements on its right. If there are no elements to the left/right, then the sum is considered to be zero. <br>
+Formally, find an $i$, such that, $A$<sub>1</sub>$+A$<sub>2</sub>$...A$<sub>i-1</sub>  $= A$<sub>i+1</sub>$+A$<sub>i+2</sub>$...A$<sub>N</sub>.</p>
+
+<p><strong>Input Format</strong> <br>
+The first line contains $T$, the number of test cases. For each test case, the first line contains $N$, the number of elements in the array $A$. The second line for each test case contains $N$ space-separated integers, denoting the array $A$.   </p>
+
+<p><strong>Output Format</strong> <br>
+For each test case print <code>YES</code> if there exists an element in the array, such that the sum of the elements on its left is equal to the sum of the elements on its right; otherwise print <code>NO</code>.  </p>
+
+<p><strong>Constraints</strong> <br>
+$1 \le T \le 10$ <br>
+$1 \le N \le 10^5$ <br>
+$1 \le A$<sub>i</sub> $\le 2 \times 10^4$ <br>
+$1 \le i \le N$</p>
+
+<p><strong>Sample Input</strong>   </p>
+
+<pre><code>2
+3
+1 2 3
+4
+1 2 3 3
+</code></pre>
+
+<p><strong>Sample Output</strong></p>
+
+<pre><code>NO
+YES
+</code></pre>
+
+<p><strong>Explanation</strong> <br>
+For the first test case, no such index exists. <br>
+For the second test case, $A[1] + A[2] = A[4]$, therefore index $3$ satisfies the given conditions.</p></div></body></html>
